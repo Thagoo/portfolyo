@@ -1,5 +1,6 @@
 import { useTheme } from "@/context/ThemeContext";
 import React from "react";
+import { default as NextLink } from "next/link";
 
 function NavTop() {
   const { theme } = useTheme();
@@ -9,11 +10,10 @@ function NavTop() {
       <div className="container">
         <div className="row">
           <div className="col-md-4 valign">
-            <a href="#0" className="logo icon-img-60">
+            <NextLink href="/" className="logo icon-img-60">
               <img src={`/${theme}/assets/imgs/logo.png`} alt="" />
-            </a>{" "}
+            </NextLink>
           </div>
-
           <div className="col-md-4 valign">
             <div className="social text-center full-width">
               <a href="#0">

@@ -1,9 +1,8 @@
 import React from "react";
 import data from "@/data/blogs.json";
 import Link from "next/link";
-import { useTheme } from "@/context/ThemeContext";
+
 function Blog() {
-  const { theme } = useTheme();
   return (
     <div className="sec-box blog section-padding bord-thin-top" id="blog">
       <div className="sec-head mb-80">
@@ -48,7 +47,7 @@ function Blog() {
                     Aug 2022
                   </span>
                   <h5>
-                    <Link href={`${theme}/${item.link}`}>{item.title}</Link>
+                    <Link href={`portfolio/${item.link}`}>{item.title}</Link>
                   </h5>
                 </div>
                 <div className="info d-flex align-items-center">

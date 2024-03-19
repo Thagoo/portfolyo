@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-scroll";
+import { default as NextLink } from "next/link";
+
 function Navbar() {
   return (
     <nav className="navbar">
@@ -7,9 +9,9 @@ function Navbar() {
         <div className="col-lg-8 rest">
           <ul className="navbar-nav main-bg d-flex justify-content-end">
             <li className="nav-item">
-              <a href="/dark/home">
+              <NextLink href="/portfolio">
                 <span>Home</span>
-              </a>
+              </NextLink>
             </li>
             <li className="nav-item">
               <Link to="services" spy={true} smooth={true}>
