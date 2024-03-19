@@ -5,7 +5,7 @@ import Cursor from "@/components/Common/cusor";
 import LoadingScreen from "@/components/Common/loader";
 import ContactUs from "@/components/portfolio/contact/ContactUs";
 import Nav from "@/components/portfolio/blogs/nav";
-import Portfolio from "@/components/portfolio/blogs/works/portfolio";
+import Portfolio from "@/components/portfolio/works/portfolio";
 import Footer from "@/components/portfolio/home/footer";
 
 import Lines from "@/components/Common/Lines";
