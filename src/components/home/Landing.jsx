@@ -1,4 +1,5 @@
-import React from 'react';
+import Link from "next/link";
+import React from "react";
 
 function Landing() {
   return (
@@ -22,9 +23,9 @@ function Landing() {
             <div className="item mt-40">
               <div className="img">
                 <div className="screen">
-                  <a href="/dark" target="_blank">
+                  <Link href="/dark">
                     <img src="demos/1.png" alt="" />
-                  </a>
+                  </Link>
                 </div>
                 <div className="botm"></div>
               </div>
@@ -37,9 +38,9 @@ function Landing() {
             <div className="item mt-40">
               <div className="img">
                 <div className="screen">
-                  <a href="/light-m" target="_blank">
+                  <Link href="/light">
                     <img src="demos/2.png" alt="" />
-                  </a>
+                  </Link>
                 </div>
                 <div className="botm"></div>
               </div>

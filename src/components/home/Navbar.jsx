@@ -1,13 +1,16 @@
-import React from 'react';
+import { useTheme } from "@/context/ThemeContext";
+import React from "react";
 
 function Navbar() {
+  const { theme } = useTheme();
+
   return (
     <div className="nav-top pt-30 pb-30">
       <div className="container">
         <div className="row">
           <div className="col-md-6 valign">
             <a href="#0" className="logo icon-img-60">
-              <img src="assets/imgs/logo-light.png" alt="" />
+              <img src={`${theme}/assets/imgs/logo.png`} alt="" />
             </a>
           </div>
           <div className="col-md-6 valign">
