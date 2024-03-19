@@ -1,3 +1,5 @@
+"use client";
+import ThemeToggle from "@/components/Common/themeToggle";
 import { useTheme } from "@/context/ThemeContext";
 import React from "react";
 
@@ -12,6 +14,9 @@ function Nav() {
             <a href="/portfolio" className="logo icon-img-60">
               <img src={`/${theme}/assets/imgs/logo.png`} alt="" />
             </a>
+            <div className="d-flex full-width justify-content-end ">
+              <ThemeToggle />
+            </div>
           </div>
           <div className="col-md-8">
             <div className="navbar">

@@ -9,7 +9,6 @@ import Project from "@/components/portfolio/blogs/single-blog/project";
 import Blogs from "@/components/portfolio/blogs/single-blog/blogs";
 import Footer from "@/components/portfolio/home/footer";
 import Lines from "@/components/Common/Lines";
-import { useTheme } from "@/context/ThemeContext";
 
 function SingleBlog() {
   return (

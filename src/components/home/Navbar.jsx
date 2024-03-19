@@ -13,6 +13,7 @@ function Navbar() {
               <img src={`${theme}/assets/imgs/logo.png`} alt="" />
             </a>
           </div>
+
           <div className="col-md-6 valign">
             <div className="full-width info">
               <div className="d-flex justify-content-end">
