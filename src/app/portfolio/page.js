@@ -21,7 +21,7 @@ import { useTheme } from "@/context/ThemeContext";
 import Navbar from "@/components/portfolio/home/navbar";
 import Testimonials from "@/components/portfolio/home/testimonials";
 
-function HomeDark({ params }) {
+function HomeDark() {
   return (
     <div>
       <Cursor />

@@ -11,13 +11,7 @@ import Footer from "@/components/portfolio/home/footer";
 import Lines from "@/components/Common/Lines";
 import { useTheme } from "@/context/ThemeContext";
 
-function SingleBlog({ params }) {
-  const { theme, setTheme } = useTheme();
-
-  useEffect(() => {
-    setTheme(params.mode);
-  }, []);
-
+function SingleBlog() {
   return (
     <div>
       <Cursor />

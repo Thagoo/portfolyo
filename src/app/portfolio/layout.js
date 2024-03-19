@@ -6,12 +6,8 @@ import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function RootLayout({ children, params }) {
-  const { theme, setTheme } = useTheme();
-
-  useEffect(() => {
-    setTheme(params.mode);
-  }, []);
+export default function RootLayout({ children }) {
+  const { theme } = useTheme();
 
   useEffect(() => {
     // Function to load the stylesheet dynamically

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function Blog() {
@@ -22,9 +23,9 @@ function Blog() {
                   Aug 2022
                 </span>
                 <h4>
-                  <a href="single-blog">
+                  <Link href={`/portfolio/single-blog`}>
                     12 unique examples of portfolio websites.
-                  </a>
+                  </Link>
                 </h4>
                 <div className="row justify-content-center mt-15">
                   <div className="col-lg-8">
@@ -43,7 +44,7 @@ function Blog() {
                   </span>
                 </div>
                 <div className="ml-auto">
-                  <a href="single-blog">
+                  <Link href={`/portfolio/single-blog`}>
                     Read More{" "}
                     <svg
                       className="ml-5"
@@ -58,7 +59,7 @@ function Blog() {
                         fill="currentColor"
                       ></path>
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -1,7 +1,10 @@
+import { useTheme } from "@/context/ThemeContext";
 import Link from "next/link";
 import React from "react";
 
 function Landing() {
+  const { setTheme } = useTheme();
+
   return (
     <section className="preview section-padding">
       <div className="container">
@@ -23,7 +26,7 @@ function Landing() {
             <div className="item mt-40">
               <div className="img">
                 <div className="screen">
-                  <Link href="/dark">
+                  <Link href="/portfolio" onClick={() => setTheme("dark")}>
                     <img src="demos/1.png" alt="" />
                   </Link>
                 </div>
@@ -38,7 +41,7 @@ function Landing() {
             <div className="item mt-40">
               <div className="img">
                 <div className="screen">
-                  <Link href="/light">
+                  <Link href="/portfolio" onClick={() => setTheme("light")}>
                     <img src="demos/2.png" alt="" />
                   </Link>
                 </div>

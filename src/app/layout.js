@@ -13,20 +13,6 @@ export default function RootLayout({ children }) {
   return (
     <ThemeProvider>
       <html lang="en">
-        {/* <head>
-        <link rel="icon" href="/assets/imgs/favicon.ico" />
-        <link rel="shortcut icon" href="/assets/imgs/favicon.ico" />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="/dark/assets/css/plugins.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="/dark/assets/css/style.css"
-        />
-      </head> */}
         <body className={inter.className}>{children}</body>
       </html>
     </ThemeProvider>

@@ -1,5 +1,6 @@
 import React from "react";
 import data from "@/data/blogs.json";
+import Link from "next/link";
 
 function Blogs() {
   return (
@@ -25,7 +26,7 @@ function Blogs() {
                     Aug 2022
                   </span>
                   <h5>
-                    <a href={item.link}>{item.title}</a>
+                    <Link href={`/portfolio/${item.link}`}>{item.title}</Link>
                   </h5>
                 </div>
                 <div className="info d-flex align-items-center">
@@ -35,7 +36,7 @@ function Blogs() {
                     </span>
                   </div>
                   <div className="ml-auto">
-                    <a href={item.link}>
+                    <Link href={`/portfolio/${item.link}`}>
                       Read More{" "}
                       <svg
                         className="ml-5"
@@ -50,7 +51,7 @@ function Blogs() {
                           fill="currentColor"
                         ></path>
                       </svg>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

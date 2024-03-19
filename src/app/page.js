@@ -13,14 +13,18 @@ import { useTheme } from "@/context/ThemeContext";
 
 function Home() {
   // By default home page will be dark because demo grid don't have proper support for light theme
-  const { theme, setTheme } = useTheme();
+  // So setting "theme" variable locally prevents home page to turn light mode.
 
+  const { setTheme } = useTheme();
   useEffect(() => {
     setTheme("dark");
   }, []);
 
+  const theme = "dark";
+
   useEffect(() => {
     // Function to load the stylesheet dynamically
+
     function loadStylesheet(theme) {
       const styleLink = document.createElement("link");
       styleLink.href = `${theme}/assets/css/style.css`;
