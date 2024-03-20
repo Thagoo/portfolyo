@@ -27,7 +27,7 @@ function HomeDark() {
       <Cursor />
       <ContactUs />
       <Lines />
-      <LoadingScreen />
+
       <ProgressScroll />
       <div>
         <NavTop />
