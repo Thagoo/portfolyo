@@ -23,7 +23,7 @@ function Blog() {
                   Aug 2022
                 </span>
                 <h4>
-                  <Link href={`/portfolio/single-blog`}>
+                  <Link href={`/portfolio/blogs/single-blog`}>
                     12 unique examples of portfolio websites.
                   </Link>
                 </h4>
@@ -44,7 +44,7 @@ function Blog() {
                   </span>
                 </div>
                 <div className="ml-auto">
-                  <Link href={`/portfolio/single-blog`}>
+                  <Link href={`/portfolio/blogs/single-blog`}>
                     Read More{" "}
                     <svg
                       className="ml-5"

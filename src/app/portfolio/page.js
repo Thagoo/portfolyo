@@ -3,43 +3,58 @@ import React, { useEffect } from "react";
 
 import ProgressScroll from "@/components/Common/ProgressScroll";
 import Cursor from "@/components/Common/cusor";
-import LoadingScreen from "@/components/Common/loader";
 import Blog from "@/components/portfolio/home/blog";
 import ContactUs from "@/components/portfolio/contact/ContactUs";
 import Info from "@/components/portfolio/contact/info";
 import Footer from "@/components/portfolio/home/footer";
 import NavTop from "@/components/portfolio/home/nav-top";
-// import Navbar from "@/components/portfolio/home/navbar";
 import Portfolio from "@/components/portfolio/home/portfolio";
 import Price from "@/components/portfolio/home/price";
 import Profile from "@/components/portfolio/home/profile";
 import Services from "@/components/portfolio/home/services";
 import Skills from "@/components/portfolio/home/skills";
-// import Testimonials from "@/components/portfolio/home/testimonials";
 import Lines from "@/components/Common/Lines";
-import { useTheme } from "@/context/ThemeContext";
 import Navbar from "@/components/portfolio/home/navbar";
 import Testimonials from "@/components/portfolio/home/testimonials";
+import { useData } from "@/context/PortfolioContext";
+import LoadingScreen from "@/components/Common/loader";
+import Timelines from "@/components/portfolio/home/timelines";
 
 function HomeDark() {
+  const { data, loading, error, fetchData } = useData();
+
+  useEffect(() => {
+    fetchData("65b3a22c01d900e96c4219ae");
+  }, []);
+
+  if (loading) {
+    return (
+      <>
+        <Cursor />
+        <LoadingScreen />
+      </>
+    );
+  }
+
   return (
     <div>
       <Cursor />
       <ContactUs />
       <Lines />
-
       <ProgressScroll />
       <div>
         <NavTop />
         <main className="container">
-          <Profile />
+          <Profile about={data?.about} />
           <Navbar />
           <section className="in-box">
-            <Services />
-            <Skills />
-            <Portfolio />
-            <Testimonials />
-            <Price />
+            <Services services={data?.services} />
+            <Skills skills={data?.skills} />
+            <Portfolio projects={data?.projects} />
+            <Timelines timelines={data?.timeline} />
+            <Testimonials testimonials={data?.testimonials} />
+
+            {data?.price && <Price />}
             <Info />
             <Blog />
           </section>

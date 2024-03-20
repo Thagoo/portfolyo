@@ -26,7 +26,9 @@ function Blogs() {
                     Aug 2022
                   </span>
                   <h5>
-                    <Link href={`/portfolio/${item.link}`}>{item.title}</Link>
+                    <Link href={`/portfolio/blogs/${item.link}`}>
+                      {item.title}
+                    </Link>
                   </h5>
                 </div>
                 <div className="info d-flex align-items-center">
@@ -36,7 +38,7 @@ function Blogs() {
                     </span>
                   </div>
                   <div className="ml-auto">
-                    <Link href={`/portfolio/${item.link}`}>
+                    <Link href={`/portfolio/blogs/${item.link}`}>
                       Read More{" "}
                       <svg
                         className="ml-5"

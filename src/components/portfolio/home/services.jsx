@@ -1,6 +1,9 @@
 import React from "react";
 import data from "@/data/services.json";
-function Services() {
+function Services({ services }) {
+  const sortedServices = services
+    .filter((service) => service.enabled)
+    .sort((a, b) => a.sequence - b.sequence);
   return (
     <div
       className="sec-box services section-padding bord-thin-bottom"
@@ -18,15 +21,15 @@ function Services() {
         </div>
       </div>
       <div className="row">
-        {data.map((item, index) => (
+        {sortedServices.map((item, index) => (
           <div key={index} className="col-md-6">
             <div className="item mb-40 wow fadeIn" data-wow-delay=".2s">
               <span className="icon-img-70 mb-30 opacity-7">
-                <img src={item.icon} alt="" />
+                <img src={item.image.url} alt="" />
               </span>
-              <h6 className="text-u ls1 mb-15">{item.title}</h6>
-              <p>{item.description}</p>
-              <div className="bord-color"></div>
+              <h6 className="text-u ls1 mb-15">{item.name}</h6>
+              <p>{item.desc}</p>
+              <div className="bord-color">{item.charge}</div>
             </div>
           </div>
         ))}

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
 
 const swiperOptions = {
   modules: [Navigation],
@@ -9,12 +9,16 @@ const swiperOptions = {
   speed: 1000,
 
   navigation: {
-    nextEl: '.testimonials .swiper-button-next',
-    prevEl: '.testimonials .swiper-button-prev',
+    nextEl: ".testimonials .swiper-button-next",
+    prevEl: ".testimonials .swiper-button-prev",
   },
 };
 
-function Testimonials() {
+function Testimonials({ testimonials }) {
+  const sortedTestimonials = testimonials.filter(
+    (testimonial) => testimonial.enabled
+  );
+
   return (
     <div className="sec-box testimonials section-padding">
       <div className="pad-left">
@@ -23,7 +27,10 @@ function Testimonials() {
             <div className="col-lg-7">
               <h6 className="sub-title opacity-7 mb-15">Testimonials</h6>
               <h3>
-                Trusted by <span className="main-color">Hundered Clients</span>
+                Trusted by{" "}
+                <span className="main-color">
+                  {sortedTestimonials.length} Clients
+                </span>
               </h3>
             </div>
           </div>
@@ -37,103 +44,50 @@ function Testimonials() {
                 className="swiper-container"
                 {...swiperOptions}
               >
-                <SwiperSlide style={{ height: '400px' }}>
-                  <div className="item ">
-                    <div className="icon-img-60 mr-60">
-                      <img src="/assets/imgs/svg-assets/quote.png" alt="" />
-                    </div>
-
-                    <div>
-                      <div className="cont mb-30">
-                        <div className="d-flex align-items-center">
-                          <div className="rate-stars fz-12">
-                            <span className="rate main-color">
-                              <i className="fas fa-star"></i>
-                              <i className="fas fa-star"></i>
-                              <i className="fas fa-star"></i>
-                              <i className="fas fa-star"></i>
-                              <i className="fas fa-star"></i>
-                            </span>
-                            <span className="fz-12 opacity-7 ml-10">
-                              (71 Reviews)
-                            </span>
-                          </div>
-                        </div>
-                        <p className="fz-20 mt-15">
-                          We have purchased well into the thousands of items,
-                          but this is without doubt one of the best we’ve have
-                          been lucky enough to work on, the attention to detail
-                          apparent throughout, and the delivery is impressively
-                          intuitive.
-                        </p>
-                      </div>
-                      <div className="d-flex align-items-center">
-                        <div>
-                          <div className="img">
-                            <img src="/assets/imgs/testim/1.jpg" alt="" />
-                          </div>
-                        </div>
-                        <div className="ml-30">
-                          <div className="info">
-                            <h6 className="main-color">Leonard Heiser</h6>
-                            <span className="fz-13 mt-10 opacity-8">
-                              Envato customer
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide style={{ height: '400px' }}>
-                  <div className="item d-flex">
-                    <div>
+                {sortedTestimonials.map((item, index) => (
+                  <SwiperSlide style={{ height: "400px" }}>
+                    <div className="item ">
                       <div className="icon-img-60 mr-60">
                         <img src="/assets/imgs/svg-assets/quote.png" alt="" />
                       </div>
-                    </div>
-                    <div>
-                      <div className="cont mb-30">
+
+                      <div>
+                        <div className="cont mb-30">
+                          <div className="d-flex align-items-center">
+                            <div className="rate-stars fz-12">
+                              <span className="rate main-color">
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                              </span>
+                              <span className="fz-12 opacity-7 ml-10">
+                                ({sortedTestimonials.length})
+                              </span>
+                            </div>
+                          </div>
+                          <p className="fz-20 mt-15">{item.review}</p>
+                        </div>
                         <div className="d-flex align-items-center">
-                          <div className="rate-stars fz-12">
-                            <span className="rate main-color">
-                              <i className="fas fa-star"></i>
-                              <i className="fas fa-star"></i>
-                              <i className="fas fa-star"></i>
-                              <i className="fas fa-star"></i>
-                              <i className="fas fa-star"></i>
-                            </span>
-                            <span className="fz-12 opacity-7 ml-10">
-                              (71 Reviews)
-                            </span>
+                          <div>
+                            <div className="img">
+                              <img src={item.image.url} alt="" />
+                            </div>
                           </div>
-                        </div>
-                        <p className="fz-20 mt-15">
-                          We have purchased well into the thousands of items,
-                          but this is without doubt one of the best we’ve have
-                          been lucky enough to work on, the attention to detail
-                          apparent throughout, and the delivery is impressively
-                          intuitive.
-                        </p>
-                      </div>
-                      <div className="d-flex align-items-center">
-                        <div>
-                          <div className="img">
-                            <img src="/assets/imgs/testim/1.jpg" alt="" />
-                          </div>
-                        </div>
-                        <div className="ml-30">
-                          <div className="info">
-                            <h6 className="main-color">Leonard Heiser</h6>
-                            <span className="fz-13 mt-10 opacity-8">
-                              Envato customer
-                            </span>
+                          <div className="ml-30">
+                            <div className="info">
+                              <h6 className="main-color">{item.name}</h6>
+                              <span className="fz-13 mt-10 opacity-8">
+                                {item.position}
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </SwiperSlide>
+                  </SwiperSlide>
+                ))}
               </Swiper>
               {/* </div> */}
             </div>

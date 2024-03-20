@@ -1,7 +1,10 @@
 import React from "react";
 import data2 from "@/data/skills2.json";
 import data from "@/data/skills.json";
-function Skills() {
+function Skills({ skills }) {
+  const sortedSkills = skills
+    .filter((skill) => skill.enabled)
+    .sort((a, b) => a.sequence - b.sequence);
   return (
     <div
       className="sec-box skills section-padding bord-thin-bottom"
@@ -18,23 +21,26 @@ function Skills() {
         </div>
         <div className="col-lg-8">
           <div className="row">
-            {data.map((item, index) => (
+            {sortedSkills.map((item, index) => (
               <div key={index} className="col-md-6">
                 <div className="item mb-30">
                   <div className="d-flex align-items-center mb-30">
                     <div className="mr-30">
                       <div className="img icon-img-40">
-                        <img src={item.photo} alt="" />
+                        <img src={item.image.url} alt="" />
                       </div>
                     </div>
                     <div>
-                      <h6 className="fz-18">{item.title}</h6>
+                      <h6 className="fz-18">{item.name}</h6>
                     </div>
                   </div>
                   <div className="skill-progress">
-                    <span className="progres" data-value={item.persent}></span>
+                    <span
+                      className="progres"
+                      data-value={item.percentage}
+                    ></span>
                   </div>
-                  <span className="value">{item.persent}</span>
+                  <span className="value">{item.percentage}%</span>
                 </div>
               </div>
             ))}

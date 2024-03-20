@@ -15,7 +15,7 @@ function Blog() {
           </div>
           <div className="col-lg-6 valign">
             <div className="go-more full-width d-flex justify-content-end">
-              <a href="/blogs" className="d-flex">
+              <a href="/portfolio/blogs" className="d-flex">
                 <span>
                   View All Posts{" "}
                   <svg
@@ -47,7 +47,9 @@ function Blog() {
                     Aug 2022
                   </span>
                   <h5>
-                    <Link href={`portfolio/${item.link}`}>{item.title}</Link>
+                    <Link href={`portfolio/blogs/single-blog`}>
+                      {item.title}
+                    </Link>
                   </h5>
                 </div>
                 <div className="info d-flex align-items-center">
@@ -57,7 +59,7 @@ function Blog() {
                     </span>
                   </div>
                   <div className="ml-auto">
-                    <a href="single-blog">
+                    <a href="portfolio/blogs/single-blog">
                       Read More{" "}
                       <svg
                         className="ml-5"

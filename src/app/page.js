@@ -8,8 +8,9 @@ import ProgressScroll from "@/components/Common/ProgressScroll";
 import LoadingScreen from "@/components/Common/loader";
 import Lines from "@/components/Common/Lines";
 import Cursor from "@/components/Common/cusor";
-import Head from "next/head";
+
 import { useTheme } from "@/context/ThemeContext";
+import { fetchUserData } from "@/lib/data";
 
 function Home() {
   // By default home page will be dark because demo grid don't have proper support for light theme

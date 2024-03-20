@@ -8,7 +8,8 @@ import ProjectView from "@/components/portfolio/works/single-project/project-vie
 import Footer from "@/components/portfolio/home/footer";
 import Lines from "@/components/Common/Lines";
 
-function SingleProject() {
+function SingleProject({ params }) {
+  console.log(params.slug);
   return (
     <div>
       <Cursor />

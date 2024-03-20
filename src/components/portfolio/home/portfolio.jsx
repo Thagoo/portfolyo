@@ -1,7 +1,10 @@
 import React from "react";
 import data from "@/data/works.json";
 
-function Portfolio() {
+function Portfolio({ projects }) {
+  const sortedProjects = projects
+    .filter((project) => project.enabled)
+    .sort((a, b) => a.sequence - b.sequence);
   return (
     <div className="sec-box portfolio section-padding" id="portfolio">
       <div className="sec-head mb-30">
@@ -15,7 +18,7 @@ function Portfolio() {
           </div>
           <div className="col-lg-6 valign">
             <div className="go-more full-width d-flex justify-content-end">
-              <a href="/works" className="d-flex">
+              <a href="/portfolio/works" className="d-flex">
                 <span>
                   View All Works{" "}
                   <svg
@@ -36,20 +39,21 @@ function Portfolio() {
       </div>
       <div className="gallery">
         <div className="row">
-          {data?.slice(0, 4).map((item, index) => (
+          {sortedProjects?.slice(0, 4).map((item, index) => (
             <div key={index} className="col-lg-6 items">
               <div className="item mt-50 wow fadeInUp" data-wow-delay=".2s">
                 <div className="img">
                   <a href={item.link}>
-                    <img src={item.photo} alt="" />
+                    <img src={item.image.url} alt="" />
                   </a>
                 </div>
                 <div className="cont mt-30 d-flex align-items-center">
                   <div>
-                    <span className="tag">Branding</span>
-                    <h6 className="line-height-1">
-                      <a href="single-project">{item.title}</a>
-                    </h6>
+                    {item.techStack.slice(0, 4).map((item, index) => (
+                      <span className="tag" key={index}>
+                        {item}
+                      </span>
+                    ))}
                   </div>
                   <div className="ml-auto">
                     <div className="arrow">
@@ -68,6 +72,14 @@ function Portfolio() {
                     </div>
                   </div>
                 </div>
+              </div>
+              <div className="px-3 d-flex full-width">
+                <h6 className="line-height-1 flex-grow-1 ">
+                  <a href="/portfolio/single-project">{item.title}</a>
+                </h6>{" "}
+                <a href="#0">
+                  <i className="fab fa-github">{item.githuburl}</i>
+                </a>
               </div>
             </div>
           ))}
