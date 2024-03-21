@@ -1,6 +1,6 @@
 import React from "react";
 
-async function Profile({ about }) {
+async function Profile({ about, socials }) {
   return (
     <section id="home" className="intro-profile md-mb50">
       <div className="row rest">
@@ -19,23 +19,18 @@ async function Profile({ about }) {
                   <img src="/assets/imgs/header/icon4.png" alt="" />
                 </span>
               </div>
+
               <div className="info text-center mt-30">
                 <h5>{about?.name}</h5>
                 <p className="fz-13 text-u">{about?.title}</p>
               </div>
               <div className="social text-center mt-20">
-                <a href="#0">
-                  <i className="fab fa-behance"></i>
-                </a>
-                <a href="#0">
-                  <i className="fab fa-github"></i>
-                </a>
-                <a href="#0">
-                  <i className="fab fa-linkedin-in"></i>
-                </a>
-                <a href="#0">
-                  <i className="fab fa-dribbble"></i>
-                </a>
+                {socials.map((item, index) => (
+                  <a href={item.url} key={index}>
+                    {/* fa icons looked better than images  */}
+                    <i className={`fab fa-${item.platform.toLowerCase()}`}></i>
+                  </a>
+                ))}
               </div>
             </div>
           </div>

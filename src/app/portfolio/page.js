@@ -45,7 +45,7 @@ function HomeDark() {
       <div>
         <NavTop />
         <main className="container">
-          <Profile about={data?.about} />
+          <Profile about={data?.about} socials={data?.social_handles} />
           <Navbar />
           <section className="in-box">
             <Services services={data?.services} />
