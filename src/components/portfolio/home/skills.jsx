@@ -37,8 +37,7 @@ function Skills({ skills }) {
                   <div className="skill-progress">
                     <span
                       className="progres"
-                      style={{ width: `${item.percentage}%` }}
-                      data-value={`${item.percentage}%`}
+                      data-value={item.percentage}
                     ></span>
                   </div>
                   <span className="value">{item.percentage}%</span>
