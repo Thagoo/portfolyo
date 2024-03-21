@@ -45,7 +45,7 @@ function Testimonials({ testimonials }) {
                 {...swiperOptions}
               >
                 {sortedTestimonials.map((item, index) => (
-                  <SwiperSlide style={{ height: "400px" }}>
+                  <SwiperSlide style={{ height: "400px" }} key={index}>
                     <div className="item ">
                       <div className="icon-img-60 mr-60">
                         <img src="/assets/imgs/svg-assets/quote.png" alt="" />
