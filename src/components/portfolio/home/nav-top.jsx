@@ -15,7 +15,7 @@ function NavTop() {
             <NextLink href="/" className="logo icon-img-60">
               <img src={`/${theme}/assets/imgs/logo.png`} alt="" />
             </NextLink>
-            <div className="d-flex full-width justify-content-end ">
+            <div className="d-flex mx-5 full-width justify-content-end ">
               <ThemeToggle />
             </div>
           </div>

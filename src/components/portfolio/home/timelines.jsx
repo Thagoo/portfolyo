@@ -25,7 +25,7 @@ function Timelines({ timelines }) {
   return (
     <div
       className="sec-box services section-padding bord-thin-bottom"
-      id="services"
+      id="timeline"
     >
       <div className="sec-head mb-80 wow fadeInUp">
         <div className="row justify-content-center">

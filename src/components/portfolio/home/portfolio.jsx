@@ -43,7 +43,7 @@ function Portfolio({ projects }) {
             <div key={index} className="col-lg-6 items">
               <div className="item mt-50 wow fadeInUp" data-wow-delay=".2s">
                 <div className="img">
-                  <a href={item.link}>
+                  <a href={`/portfolio/works/${item.link}`}>
                     <img src={item.image.url} alt="" />
                   </a>
                 </div>
