@@ -14,7 +14,11 @@ export const PortfolioProvider = ({ children }) => {
   const fetchData = async (userId) => {
     try {
       const data = await fetchPortfolioData(userId);
-      setData(data?.user);
+      if (data?.user) {
+        setData(data.user);
+      } else {
+        setError(data);
+      }
     } catch (error) {
       setError(error);
     } finally {

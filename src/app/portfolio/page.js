@@ -24,7 +24,9 @@ function HomeDark() {
   const { data, loading, error, fetchData } = useData();
 
   useEffect(() => {
-    fetchData("65b3a22c01d900e96c4219ae");
+    // Change id for error testing
+    const userId = "65b3a22c01d900e96c4219ae";
+    fetchData(userId);
   }, []);
 
   if (loading) {
@@ -34,6 +36,10 @@ function HomeDark() {
         <LoadingScreen />
       </>
     );
+  }
+
+  if (error) {
+    throw new Error(error);
   }
 
   return (
