@@ -39,7 +39,7 @@ function Projects({ projects }) {
       </div>
       <div className="gallery">
         <div className="row">
-          {sortedProjects?.slice(0, 4).map((item, index) => (
+          {sortedProjects?.map((item, index) => (
             <div key={index} className="col-lg-6 items">
               <div className="item mt-50 wow fadeInUp" data-wow-delay=".2s">
                 <div className="img">
@@ -47,39 +47,37 @@ function Projects({ projects }) {
                     <img src={item.image.url} alt="" />
                   </Link>
                 </div>
-                <div className="cont mt-30 d-flex align-items-center">
-                  <div>
-                    {item.techStack.slice(0, 4).map((item, index) => (
-                      <span className="tag" key={index}>
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="ml-auto">
-                    <div className="arrow">
-                      <a href="single-project">
-                        <svg
-                          className="arrow-right"
-                          xmlns="http://www.w3.org/2000/svg"
-                          xmlnsXlink="http://www.w3.org/1999/xlink"
-                          x="0px"
-                          y="0px"
-                          viewBox="0 0 34.2 32.3"
-                          xmlSpace="preserve"
-                          style={{ strokeWidth: 2 }}
-                        />
-                      </a>
-                    </div>
+              </div>
+              <div className="cont mt-10 d-flex align-items-center">
+                <div className="mt-20 butn-presv">
+                  {item.techStack.map((item, index) => (
+                    <span
+                      class="butn butn-xs butn-bord radius-5 ml-10 cursor-pointer p-1"
+                      key={index}
+                    >
+                      #{item}
+                    </span>
+                  ))}
+                  <h6 className="mt-20">
+                    <a href="/portfolio/single-project">{item.title}</a>
+                  </h6>
+                </div>
+                <div className="ml-auto mt-4">
+                  <div className="arrow">
+                    <a href="single-project">
+                      <svg
+                        className="arrow-right"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlnsXlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 34.2 32.3"
+                        xmlSpace="preserve"
+                        style={{ strokeWidth: 2 }}
+                      />
+                    </a>
                   </div>
                 </div>
-              </div>
-              <div className="px-3 d-flex full-width">
-                <h6 className="line-height-1 flex-grow-1 ">
-                  <a href="/portfolio/single-project">{item.title}</a>
-                </h6>{" "}
-                <a href="#0">
-                  <i className="fab fa-github">{item.githuburl}</i>
-                </a>
               </div>
             </div>
           ))}
