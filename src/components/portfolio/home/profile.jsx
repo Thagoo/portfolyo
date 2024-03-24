@@ -1,6 +1,6 @@
 import React from "react";
 
-async function Profile({ about, socials }) {
+function Profile({ about, socials }) {
   return (
     <section id="home" className="intro-profile md-mb50">
       <div className="row rest">

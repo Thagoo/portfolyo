@@ -11,7 +11,8 @@ export const PortfolioProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const fetchData = async (userId) => {
+  const fetchData = async () => {
+    const userId = "65b3a22c01d900e96c4219ae";
     try {
       const data = await fetchPortfolioData(userId);
       if (data?.user) {

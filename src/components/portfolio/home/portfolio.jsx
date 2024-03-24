@@ -1,5 +1,4 @@
 import React from "react";
-import data from "@/data/works.json";
 
 function Portfolio({ projects }) {
   const sortedProjects = projects

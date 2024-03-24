@@ -43,6 +43,19 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <head>
+        <script
+          src="/assets/js/jquery-3.6.0.min.js"
+          strategy="beforeInteractive"
+        />
+        <script
+          src="/assets/js/jquery-migrate-3.4.0.min.js"
+          strategy="beforeInteractive"
+        />
+        <script src="/assets/js/plugins.js" strategy="beforeInteractive" />
+        <script src="/assets/js/scripts.js" strategy="beforeInteractive" />
+        <script src="/assets/js/three.min.js" strategy="lazyOnload" />
+      </head>
       <body className={inter.className}>
         <PortfolioProvider>{children}</PortfolioProvider>
       </body>

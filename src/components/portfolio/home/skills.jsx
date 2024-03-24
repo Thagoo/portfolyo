@@ -10,16 +10,17 @@ function Skills({ skills }) {
       className="sec-box skills section-padding bord-thin-bottom"
       id="skills"
     >
-      <div className="row">
-        <div className="col-lg-4 valign">
-          <div className="sec-head md-mb80 wow fadeIn">
-            <h6 className="sub-title opacity-7 mb-15">Our Skills</h6>
-            <h3>
-              <span className="main-color">Awards</span> & Recognitions
-            </h3>
-          </div>
+      <div className="row justify-content-center">
+        <div className="col-lg-6 text-center">
+          <h6 className="sub-title opacity-7 mb-15">Our Skills</h6>
+          <h3>
+            <span className="main-color mb-15">Awards</span> & Recognitions
+          </h3>
         </div>
-        <div className="col-lg-8">
+      </div>
+
+      <div className="row">
+        <div className="col-lg-12">
           <div className="row">
             {sortedSkills.map((item, index) => (
               <div key={index} className="col-md-6">
@@ -37,7 +38,7 @@ function Skills({ skills }) {
                   <div className="skill-progress">
                     <span
                       className="progres"
-                      data-value={item.percentage}
+                      data-value={`${item.percentage}%`}
                     ></span>
                   </div>
                   <span className="value">{item.percentage}%</span>

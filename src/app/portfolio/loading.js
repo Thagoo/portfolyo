@@ -7,8 +7,6 @@ import React from "react";
 export default function Loading() {
   return (
     <div>
-      <Cursor />
-
       <Lines />
       <LoadingScreen />
       <ProgressScroll />

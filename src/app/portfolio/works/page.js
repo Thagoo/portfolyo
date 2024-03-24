@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 
 import ProgressScroll from "@/components/Common/ProgressScroll";
 import Cursor from "@/components/Common/cusor";
@@ -9,8 +10,18 @@ import Portfolio from "@/components/portfolio/works/portfolio";
 import Footer from "@/components/portfolio/home/footer";
 
 import Lines from "@/components/Common/Lines";
+import { useData } from "@/context/PortfolioContext";
+import { redirect } from "next/navigation";
 
 function Works() {
+  const { data } = useData();
+  useEffect(() => {
+    if (!data) {
+      redirect("/portfolio");
+    }
+
+    setSingleProject();
+  }, []);
   return (
     <div>
       <Cursor />

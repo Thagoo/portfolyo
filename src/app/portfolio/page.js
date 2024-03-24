@@ -19,14 +19,16 @@ import Testimonials from "@/components/portfolio/home/testimonials";
 import { useData } from "@/context/PortfolioContext";
 import LoadingScreen from "@/components/Common/loader";
 import Timelines from "@/components/portfolio/home/timelines";
+import Project from "@/components/portfolio/blogs/single-blog/project";
+import Projects from "@/components/portfolio/home/projects";
 
 function HomeDark() {
   const { data, loading, error, fetchData } = useData();
 
   useEffect(() => {
     // Change id for error testing
-    const userId = "65b3a22c01d900e96c4219ae";
-    fetchData(userId);
+
+    fetchData();
   }, []);
 
   if (loading) {
@@ -57,28 +59,17 @@ function HomeDark() {
           <section className="in-box">
             <Services services={data?.services} />
             <Skills skills={data?.skills} />
-            <Portfolio projects={data?.projects} />
+            {/* <Portfolio projects={data?.projects} /> */}
             <Timelines timelines={data?.timeline} />
             <Testimonials testimonials={data?.testimonials} />
 
             {data?.price && <Price />}
             <Info />
-            <Blog />
+            <Projects projects={data?.projects} />
           </section>
         </main>
         <Footer />
       </div>
-      <script
-        src="/assets/js/jquery-3.6.0.min.js"
-        strategy="beforeInteractive"
-      />
-      <script
-        src="/assets/js/jquery-migrate-3.4.0.min.js"
-        strategy="beforeInteractive"
-      />
-      <script src="/assets/js/plugins.js" strategy="beforeInteractive" />
-      <script src="/assets/js/scripts.js" strategy="beforeInteractive" />
-      <script src="/assets/js/three.min.js" strategy="lazyOnload" />
     </div>
   );
 }
