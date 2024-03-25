@@ -39,8 +39,8 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="blog" spy={true} smooth={true}>
-                <span>Blog</span>
+              <Link to="projects" spy={true} smooth={true}>
+                <span>Projects</span>
               </Link>
             </li>
           </ul>

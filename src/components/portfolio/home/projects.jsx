@@ -6,7 +6,7 @@ function Projects({ projects }) {
   const [sortedProjects, setSortedProjects] = useState(projects);
   const [activeFilter, setActiveFilter] = useState(null);
 
-  const sortProjects = () => {
+  const sortProjects = async () => {
     setSortedProjects(
       projects
         .filter((project) => project.enabled)
@@ -15,8 +15,12 @@ function Projects({ projects }) {
   };
 
   const filterProjects = () => {
+    const updatedProjects = projects
+      .filter((project) => project.enabled)
+      .sort((a, b) => a.sequence - b.sequence);
+
     setSortedProjects(
-      sortedProjects.filter((project) =>
+      updatedProjects.filter((project) =>
         project.techStack.includes(activeFilter)
       )
     );
@@ -34,7 +38,7 @@ function Projects({ projects }) {
   }, [activeFilter]);
 
   return (
-    <div className="sec-box portfolio section-padding" id="portfolio">
+    <div className="sec-box portfolio section-padding" id="projects">
       <div className="sec-head mb-30">
         <div className="row">
           <div className="col-lg-6">
