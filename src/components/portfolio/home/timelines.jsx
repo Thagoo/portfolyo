@@ -32,100 +32,75 @@ function Timelines({ timelines }) {
           <div className="col-lg-6 text-center">
             <h6 className="sub-title opacity-7 mb-15">Timeline</h6>
             <h3>
-              Turn Information{" "}
-              <span className="main-color">Into Actionable</span> Insights
+              Education and <span className="main-color">Experience</span>
             </h3>
           </div>
         </div>
       </div>
       <div className="row">
-        <div className="col-lg-3 valign">
-          <div className="sec-head md-mb20 wow fadeIn">
+        <div className="col-lg-12 ">
+          <div className="sec-head md-mb20 wow fadeIn text-center mb-20">
             <h3>
               <span className="main-color">Education</span>
             </h3>
           </div>
-        </div>
-        <div className="col-lg-9">
           <div className="row">
             {education &&
               education.map((item, index) => (
-                <div key={index} className="col-md-12">
-                  <div className="item mb-40 wow fadeIn" data-wow-delay=".2s">
-                    <span className="icon-img-70 mb-30 opacity-7">
-                      {item.icon && <img src={item.icon.url} alt="" />}
-                    </span>
-
-                    <h6>{item.jobTitle}</h6>
-                    <span className="sub-title main-color mt-10">
-                      {item.company_name}
-                    </span>
-
-                    <p className="mb-15">{item.summary}</p>
-                    <div className="feat">
-                      <ul className="rest">
-                        {item.bulletPoints.map((point, index) => (
-                          <li key={index}>
-                            <span>
-                              <i className="fas fa-check"></i> {point}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="bord-color">
-                      {formatDate(item.startDate)} to {formatDate(item.endDate)}
-                    </div>
-                  </div>
-                </div>
+                <TimelineCard item={item} key={index} />
               ))}
           </div>
         </div>
       </div>
 
-      <div className="d-lg-flex flex-lg-row-reverse">
-        <div className="col-lg-3 valign">
-          <div className="sec-head md-mb20 wow fadeIn">
+      <div className="row">
+        <div className="col-lg-12 ">
+          <div className="sec-head md-mb20 wow fadeIn text-center mb-20">
             <h3>
               <span className="main-color">Experience</span>
             </h3>
           </div>
-        </div>
-        <div className="col-lg-9">
           <div className="row">
             {experience &&
               experience.map((item, index) => (
-                <div key={index} className="col-md-12">
-                  <div className="item mb-40 wow fadeIn" data-wow-delay=".2s">
-                    <span className="icon-img-70 mb-30 opacity-7">
-                      {item.icon && <img src={item.icon.url} alt="" />}
-                    </span>
-
-                    <h6>{item.jobTitle}</h6>
-                    <span className="sub-title main-color mt-10">
-                      {item.company_name}
-                    </span>
-
-                    <p className="mb-15">{item.summary}</p>
-                    <div className="feat">
-                      <ul className="rest">
-                        {item.bulletPoints.map((point, index) => (
-                          <li key={index}>
-                            <span>
-                              <i className="fas fa-check"></i> {point}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="bord-color">
-                      {formatDate(item.startDate)} to {formatDate(item.endDate)}
-                    </div>
-                  </div>
-                </div>
+                <TimelineCard item={item} key={index} />
               ))}
           </div>
         </div>
+      </div>
+    </div>
+  );
+}
+
+function TimelineCard({ item }) {
+  return (
+    <div className="col-lg-12">
+      <div className="item mb-40 wow fadeIn" data-wow-delay=".2s">
+        <span className="icon-img-70 mb-30 opacity-7">
+          {item.icon && <img src={item.icon.url} alt="" />}
+        </span>
+
+        <h5>{item.jobTitle}</h5>
+        <span className="sub-title main-color mt-10 mb-10">
+          {item.company_name}
+        </span>
+
+        <p className="mb-15">{item.summary}</p>
+        <div className="feat">
+          <ul className="rest">
+            {item.bulletPoints.map((point, index) => (
+              <li key={index} className="mb-10">
+                <p>
+                  <i class="fa fa-circle-notch mr-10" aria-hidden="true"></i>
+                  {point}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <p className="bord-color">
+          {formatDate(item.startDate)} to {formatDate(item.endDate)}
+        </p>
       </div>
     </div>
   );

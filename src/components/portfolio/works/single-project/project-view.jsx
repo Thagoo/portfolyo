@@ -25,7 +25,7 @@ function ProjectView({ singleProject }) {
                   </p>
                   <ul className="rest list-arrow mt-50">
                     {singleProject.techStack.map((item, i) => (
-                      <li className="mt-4">
+                      <li className="mt-4" key={i}>
                         <span className="icon">
                           <svg
                             width="100%"

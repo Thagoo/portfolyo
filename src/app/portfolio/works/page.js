@@ -6,13 +6,11 @@ import Cursor from "@/components/Common/cusor";
 import LoadingScreen from "@/components/Common/loader";
 import ContactUs from "@/components/portfolio/contact/ContactUs";
 import Nav from "@/components/portfolio/blogs/nav";
-import Portfolio from "@/components/portfolio/works/portfolio";
 import Footer from "@/components/portfolio/home/footer";
 
 import Lines from "@/components/Common/Lines";
 import { useData } from "@/context/PortfolioContext";
-import { redirect } from "next/navigation";
-import Projects from "@/components/portfolio/home/projects";
+import Projects from "@/components/portfolio/works/projects";
 
 function Works() {
   const { data, loading, fetchData } = useData();
