@@ -12,16 +12,24 @@ import Footer from "@/components/portfolio/home/footer";
 import Lines from "@/components/Common/Lines";
 import { useData } from "@/context/PortfolioContext";
 import { redirect } from "next/navigation";
+import Projects from "@/components/portfolio/home/projects";
 
 function Works() {
-  const { data } = useData();
-  useEffect(() => {
-    if (!data) {
-      redirect("/portfolio");
-    }
+  const { data, loading, fetchData } = useData();
 
-    setSingleProject();
+  useEffect(() => {
+    fetchData();
   }, []);
+
+  if (loading) {
+    return (
+      <>
+        <Cursor />
+        <ProgressScroll />
+        <LoadingScreen />
+      </>
+    );
+  }
   return (
     <div>
       <Cursor />
@@ -31,7 +39,7 @@ function Works() {
       <ProgressScroll />
       <Nav />
       <main className="container">
-        <Portfolio />
+        <Projects projects={data.projects} />
       </main>
       <Footer />
       <script

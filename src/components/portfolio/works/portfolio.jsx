@@ -5,6 +5,7 @@ import { useData } from "@/context/PortfolioContext";
 import Cursor from "@/components/Common/cusor";
 import LoadingScreen from "@/components/Common/loader";
 import Link from "next/link";
+
 function Portfolio() {
   const { data, loading, error, fetchData } = useData();
   const [projects, setProjects] = useState(null);

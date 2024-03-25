@@ -1,10 +1,38 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function Projects({ projects }) {
-  const sortedProjects = projects
-    .filter((project) => project.enabled)
-    .sort((a, b) => a.sequence - b.sequence);
+  const [sortedProjects, setSortedProjects] = useState(projects);
+  const [activeFilter, setActiveFilter] = useState(null);
+
+  const sortProjects = () => {
+    setSortedProjects(
+      projects
+        .filter((project) => project.enabled)
+        .sort((a, b) => a.sequence - b.sequence)
+    );
+  };
+
+  const filterProjects = () => {
+    setSortedProjects(
+      sortedProjects.filter((project) =>
+        project.techStack.includes(activeFilter)
+      )
+    );
+  };
+
+  useEffect(() => {
+    sortProjects();
+  }, [projects]);
+
+  useEffect(() => {
+    sortProjects();
+    if (activeFilter) {
+      filterProjects();
+    }
+  }, [activeFilter]);
+
   return (
     <div className="sec-box portfolio section-padding" id="portfolio">
       <div className="sec-head mb-30">
@@ -52,14 +80,23 @@ function Projects({ projects }) {
                 <div className="mt-20 butn-presv">
                   {item.techStack.map((item, index) => (
                     <span
-                      class="butn butn-xs butn-bord radius-5 ml-10 cursor-pointer p-1"
+                      className={`butn butn-xs butn-bord radius-5 ml-10 cursor-pointer p-1  ${
+                        activeFilter == item ? "active" : ""
+                      }`}
                       key={index}
+                      onClick={() =>
+                        item == activeFilter
+                          ? setActiveFilter(null)
+                          : setActiveFilter(item)
+                      }
                     >
                       #{item}
                     </span>
                   ))}
                   <h6 className="mt-20">
-                    <a href="/portfolio/single-project">{item.title}</a>
+                    <Link href={`/portfolio/works/${item._id}`}>
+                      {item.title}
+                    </Link>
                   </h6>
                 </div>
                 <div className="ml-auto mt-4">
