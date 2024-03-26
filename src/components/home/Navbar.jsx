@@ -1,4 +1,5 @@
 import { useTheme } from "@/context/ThemeContext";
+import Link from "next/link";
 import React from "react";
 
 function Navbar() {
@@ -9,9 +10,9 @@ function Navbar() {
       <div className="container">
         <div className="row">
           <div className="col-md-6 valign">
-            <a href="#0" className="logo icon-img-60">
+            <Link href="#0" className="logo icon-img-60">
               <img src={`${theme}/assets/imgs/logo.png`} alt="" />
-            </a>
+            </Link>
           </div>
 
           <div className="col-md-6 valign">

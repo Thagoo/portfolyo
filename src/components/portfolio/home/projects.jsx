@@ -50,7 +50,7 @@ function Projects({ projects }) {
           </div>
           <div className="col-lg-6 valign">
             <div className="go-more full-width d-flex justify-content-end">
-              <a href="/portfolio/works" className="d-flex">
+              <Link href="/portfolio/works" className="d-flex">
                 <span>
                   View All Works{" "}
                   <svg
@@ -64,7 +64,7 @@ function Projects({ projects }) {
                     style={{ strokeWidth: 2 }}
                   />
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

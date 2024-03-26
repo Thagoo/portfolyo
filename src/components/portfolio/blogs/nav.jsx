@@ -1,6 +1,7 @@
 "use client";
 import ThemeToggle from "@/components/Common/themeToggle";
 import { useTheme } from "@/context/ThemeContext";
+import Link from "next/link";
 import React from "react";
 
 function Nav() {
@@ -11,9 +12,9 @@ function Nav() {
       <div className="container">
         <div className="row">
           <div className="col-md-4 valign">
-            <a href="/portfolio" className="logo icon-img-60">
+            <Link href="/portfolio" className="logo icon-img-60">
               <img src={`/${theme}/assets/imgs/logo.png`} alt="" />
-            </a>
+            </Link>
             <div className="d-flex mx-5 full-width justify-content-end ">
               <ThemeToggle />
             </div>
