@@ -26,8 +26,6 @@ function HomeDark() {
   const { data, loading, error, fetchData } = useData();
 
   useEffect(() => {
-    // Change id for error testing
-
     fetchData();
   }, []);
 
@@ -35,6 +33,7 @@ function HomeDark() {
     return (
       <>
         <Cursor />
+        <ProgressScroll />
         <LoadingScreen />
       </>
     );
@@ -49,7 +48,7 @@ function HomeDark() {
       <Cursor />
       <ContactUs />
       <Lines />
-      <LoadingScreen />
+
       <ProgressScroll />
       <div>
         <NavTop />

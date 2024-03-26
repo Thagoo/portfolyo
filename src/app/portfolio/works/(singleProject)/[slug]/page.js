@@ -49,7 +49,7 @@ function SingleProject({ params }) {
       <Cursor />
       <ContactUs />
       <Lines />
-      <LoadingScreen />
+
       <ProgressScroll />
       <Nav />
       <main className="container">

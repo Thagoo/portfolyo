@@ -24,6 +24,10 @@ export default function RootLayout({ children }) {
         <script src="/assets/js/plugins.js" strategy="beforeInteractive" />
         <script src="/assets/js/scripts.js" strategy="beforeInteractive" />
         <script src="/assets/js/three.min.js" strategy="lazyOnload" />
+        <link rel="preload" href="/dark/assets/css/style.css" as="style" />
+        <link rel="stylesheet" href="/dark/assets/css/style.css" />
+        <link rel="preload" href="/dark/assets/css/plugins.css" as="style" />
+        <link rel="stylesheet" href="/dark/assets/css/plugins.css" />
       </head>
       <ThemeProvider>
         <body className={inter.className}>{children}</body>
