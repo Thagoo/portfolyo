@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
@@ -20,7 +21,7 @@ function Testimonials({ testimonials }) {
   );
 
   return (
-    <div className="sec-box testimonials section-padding">
+    <div className="sec-box bg-main testimonials section-padding">
       <div className="pad-left">
         <div className="sec-head mb-80 wow fadeInUp">
           <div className="row">

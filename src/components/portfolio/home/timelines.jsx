@@ -1,5 +1,5 @@
+"use client";
 import React, { useEffect, useState } from "react";
-import data from "@/data/services.json";
 
 function formatDate(dateString) {
   const options = { year: "numeric", month: "short" };
@@ -24,16 +24,13 @@ function Timelines({ timelines }) {
 
   return (
     <div
-      className="sec-box services section-padding bord-thin-bottom"
+      className="sec-box bg-main services section-padding bord-thin-bottom"
       id="timeline"
     >
       <div className="sec-head mb-80 wow fadeInUp">
         <div className="row justify-content-center">
           <div className="col-lg-6 text-center">
             <h6 className="sub-title opacity-7 mb-15">Timeline</h6>
-            <h3>
-              Education and <span className="main-color">Experience</span>
-            </h3>
           </div>
         </div>
       </div>

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 function Project() {
   return (
-    <section class="sec-box main-post section-padding">
+    <section class="sec-box bg-main main-post section-padding">
       <div class="row justify-content-center">
         <div class="col-lg-10">
           <div class="caption text-center">
@@ -73,7 +73,7 @@ function Project() {
                   beautiful and functional blog.
                 </span>
                 <span class="sub-title main-color mt-20 mb-0">
-                  {' '}
+                  {" "}
                   - UICamp Code
                 </span>
               </h6>

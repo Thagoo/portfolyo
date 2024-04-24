@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 function Price() {
   return (
-    <div className="sec-box price section-padding" id="price">
+    <div className="sec-box bg-main price section-padding" id="price">
       <div className="sec-head mb-80 wow fadeInUp">
         <div className="row justify-content-center">
           <div className="col-lg-6 text-center">
@@ -33,21 +33,21 @@ function Price() {
               <div className="feat">
                 <ul className="rest">
                   <li>
-                    <i className="fas fa-check"></i>{' '}
+                    <i className="fas fa-check"></i>{" "}
                     <span>Need your wireframe</span>
                   </li>
                   <li>
-                    <i className="fas fa-check"></i>{' '}
+                    <i className="fas fa-check"></i>{" "}
                     <span>Design with Figma, Framer</span>
                   </li>
                   <li>
-                    <i className="fas fa-check"></i>{' '}
+                    <i className="fas fa-check"></i>{" "}
                     <span>
                       Implement with Webflow, React, WordPress, Laravel/PHP
                     </span>
                   </li>
                   <li>
-                    <i className="fas fa-check"></i>{' '}
+                    <i className="fas fa-check"></i>{" "}
                     <span>Support 6 months</span>
                   </li>
                 </ul>
@@ -84,25 +84,25 @@ function Price() {
               <div className="feat">
                 <ul className="rest">
                   <li>
-                    <i className="fas fa-check"></i>{' '}
+                    <i className="fas fa-check"></i>{" "}
                     <span>Need your wireframe</span>
                   </li>
                   <li>
-                    <i className="fas fa-check"></i>{' '}
+                    <i className="fas fa-check"></i>{" "}
                     <span>Design with Figma, Framer</span>
                   </li>
                   <li>
-                    <i className="fas fa-check"></i>{' '}
+                    <i className="fas fa-check"></i>{" "}
                     <span>
                       Implement with Webflow, React, WordPress, Laravel/PHP
                     </span>
                   </li>
                   <li>
-                    <i className="fas fa-check"></i>{' '}
+                    <i className="fas fa-check"></i>{" "}
                     <span>Support 6 months</span>
                   </li>
                   <li>
-                    <i className="fas fa-check"></i>{' '}
+                    <i className="fas fa-check"></i>{" "}
                     <span>Your project alway be priority</span>
                   </li>
                 </ul>
@@ -136,21 +136,21 @@ function Price() {
               <div className="feat">
                 <ul className="rest">
                   <li>
-                    <i className="fas fa-check"></i>{' '}
+                    <i className="fas fa-check"></i>{" "}
                     <span>Need your wireframe</span>
                   </li>
                   <li>
-                    <i className="fas fa-check"></i>{' '}
+                    <i className="fas fa-check"></i>{" "}
                     <span>Design with Figma, Framer</span>
                   </li>
                   <li>
-                    <i className="fas fa-check"></i>{' '}
+                    <i className="fas fa-check"></i>{" "}
                     <span>
                       Implement with Webflow, React, WordPress, Laravel/PHP
                     </span>
                   </li>
                   <li>
-                    <i className="fas fa-check"></i>{' '}
+                    <i className="fas fa-check"></i>{" "}
                     <span>Support 6 months</span>
                   </li>
                 </ul>

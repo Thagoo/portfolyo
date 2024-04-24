@@ -1,10 +1,13 @@
 import React from "react";
-import data from "@/data/blogs.json";
+
 import Link from "next/link";
 
 function Blog() {
   return (
-    <div className="sec-box blog section-padding bord-thin-top" id="blog">
+    <div
+      className="sec-box bg-main blog section-padding bord-thin-top"
+      id="blog"
+    >
       <div className="sec-head mb-80">
         <div className="row">
           <div className="col-lg-6 wow fadeInUp">

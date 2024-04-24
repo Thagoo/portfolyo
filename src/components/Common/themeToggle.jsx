@@ -1,27 +1,18 @@
 "use client";
-import { useTheme } from "@/context/ThemeContext";
-import gsap from "gsap";
-import { useEffect, useRef } from "react";
 
+import { useTheme } from "next-themes";
 import { LuMoon, LuSun } from "react-icons/lu";
 
 export default function ThemeToggle() {
-  const { theme, toggleTheme } = useTheme();
-  const toggleIconRef = useRef(null);
-
-  useEffect(() => {
-    gsap.to(toggleIconRef.current, {
-      rotate: `+=${theme === "light" ? 0 : 360}`,
-      duration: 0.1,
-      ease: "power2.inOut",
-    });
-  }, [theme]);
+  const { theme, setTheme } = useTheme();
 
   return (
-    <div className="cursor-pointer" onClick={toggleTheme} ref={toggleIconRef}>
-      <span>
-        {theme == "dark" ? <LuSun size={20} /> : <LuMoon size={20} />}
-      </span>
-    </div>
+    <button
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      className="relative h-9 w-full md:w-auto rounded-md whitespace-nowrap px-4 bg-background flex justify-center items-center"
+    >
+      <LuSun className="h-6 w-6 transition-all opacity-0 dark:!opacity-100" />
+      <LuMoon className="h-6 w-6 absolute transition-all dark:opacity-0" />
+    </button>
   );
 }

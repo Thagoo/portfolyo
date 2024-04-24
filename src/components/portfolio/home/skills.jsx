@@ -1,13 +1,12 @@
 import React from "react";
-import data2 from "@/data/skills2.json";
-import data from "@/data/skills.json";
+
 function Skills({ skills }) {
   const sortedSkills = skills
     .filter((skill) => skill.enabled)
     .sort((a, b) => a.sequence - b.sequence);
   return (
     <div
-      className="sec-box skills section-padding bord-thin-bottom"
+      className="sec-box bg-main skills section-padding bord-thin-bottom"
       id="skills"
     >
       <div className="row justify-content-center">
@@ -50,7 +49,7 @@ function Skills({ skills }) {
       </div>
       <div className="awards mt-100">
         <div className="row md-marg">
-          {data2.map((item, index) => (
+          {/* {data2.map((item, index) => (
             <div key={index} className="col-lg-4">
               <div
                 className="award-item sub-bg md-mb30 wow fadeInUp"
@@ -71,7 +70,7 @@ function Skills({ skills }) {
                 <span className="sub-title main-color mt-10">{item.title}</span>
               </div>
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
     </div>

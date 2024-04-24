@@ -1,8 +1,11 @@
-import React from 'react';
+import React from "react";
 
 function Info() {
   return (
-    <div className="sec-box contact section-padding bord-thin-top" id="info">
+    <div
+      className="sec-box bg-main contact section-padding bord-thin-top"
+      id="info"
+    >
       <div className="row">
         <div className="col-lg-5">
           <div className="sec-head md-mb80 wow fadeIn">

@@ -5,7 +5,7 @@ function Portfolio({ projects }) {
     .filter((project) => project.enabled)
     .sort((a, b) => a.sequence - b.sequence);
   return (
-    <div className="sec-box portfolio section-padding" id="portfolio">
+    <div className="sec-box bg-main portfolio section-padding" id="portfolio">
       <div className="sec-head mb-30">
         <div className="row">
           <div className="col-lg-6">

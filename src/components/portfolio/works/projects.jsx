@@ -38,7 +38,7 @@ function Projects({ projects }) {
   }, [activeFilter]);
 
   return (
-    <div className="sec-box portfolio section-padding" id="projects">
+    <div className="sec-box bg-main portfolio section-padding" id="projects">
       <div className="sec-head mb-30">
         <div className="row">
           <div className="col-lg-6">
@@ -56,7 +56,7 @@ function Projects({ projects }) {
             <div key={index} className="col-lg-6 items">
               <div className="item mt-50 wow fadeInUp" data-wow-delay=".2s">
                 <div className="img">
-                  <Link href={`/portfolio/works/${item._id}`}>
+                  <Link href={`/works/${item._id}`}>
                     <img src={item.image.url} alt="" />
                   </Link>
                 </div>
@@ -79,9 +79,7 @@ function Projects({ projects }) {
                     </span>
                   ))}
                   <h6 className="mt-20">
-                    <Link href={`/portfolio/works/${item._id}`}>
-                      {item.title}
-                    </Link>
+                    <Link href={`/works/${item._id}`}>{item.title}</Link>
                   </h6>
                 </div>
                 <div className="ml-auto mt-4">

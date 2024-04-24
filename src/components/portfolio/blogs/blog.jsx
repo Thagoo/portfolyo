@@ -3,7 +3,7 @@ import React from "react";
 
 function Blog() {
   return (
-    <section className="sec-box blog-main section-padding">
+    <section className="sec-box bg-main blog-main section-padding">
       <div className="sec-head text-center mb-80">
         <h6 className="sub-title opacity-7 mb-15">Our Blogs</h6>
         <h3>

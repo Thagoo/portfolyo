@@ -47,7 +47,7 @@ const ProgressScroll = () => {
     <div
       ref={containerRef}
       onClick={(e) => scrollToTop(e)}
-      className="progress-wrap fixed bottom-30 right-30 h-44 w-44 cursor-pointer block rounded-full z-100 transform translate-y-20 transition duration-400 ease-linear mix-blend-difference"
+      className="progress-wrap relative bottom-30 right-30 h-44 w-44 cursor-pointer block rounded-full z-100 transform translate-y-20 transition duration-400 ease-linear mix-blend-difference"
     >
       <svg
         width="100%"

@@ -4,7 +4,7 @@ function Profile({ about, socials }) {
   return (
     <section id="home" className="intro-profile md-mb50">
       <div className="row rest">
-        <div className="col-lg-4 box-img main-bg">
+        <div className="col-lg-4 box-img bg-main">
           <div className="cont valign">
             <div className="full-width">
               <div className="img">
@@ -36,7 +36,7 @@ function Profile({ about, socials }) {
           </div>
         </div>
 
-        <div className="col-lg-8 content main-bg">
+        <div className="col-lg-8 content bg-main">
           <h1>
             Hello, I’m <span className="main-color">{about?.name}</span>,
             <span className="bord">{about?.subTitle}</span> Based in{" "}

@@ -2,7 +2,7 @@ import React from "react";
 
 function ProjectView({ singleProject }) {
   return (
-    <section className="sec-box project section-padding radius-15">
+    <section className="sec-box bg-main project section-padding radius-15">
       <div className="row justify-content-center">
         <div className="col-lg-11">
           <div className="img mb-80">

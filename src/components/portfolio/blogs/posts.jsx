@@ -1,10 +1,10 @@
 import React from "react";
-import data from "@/data/blogs.json";
+
 import Link from "next/link";
 
 function Posts() {
   return (
-    <section className="sec-box blog section-padding pt-0">
+    <section className="sec-box bg-main blog section-padding pt-0">
       <div className="row">
         <div className="col-12">
           <div className="sec-head bord-thin-bottom pb-20 mb-80">

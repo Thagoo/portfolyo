@@ -1,6 +1,7 @@
 "use client";
 import ThemeToggle from "@/components/Common/themeToggle";
-import { useTheme } from "@/context/ThemeContext";
+import { useTheme } from "next-themes";
+
 import Link from "next/link";
 import React from "react";
 
@@ -12,8 +13,8 @@ function Nav() {
       <div className="container">
         <div className="row">
           <div className="col-md-4 valign">
-            <Link href="/portfolio" className="logo icon-img-60">
-              <img src={`/${theme}/assets/imgs/logo.png`} alt="" />
+            <Link href="/" className="logo icon-img-60">
+              <h1 className="">Portfolio</h1>
             </Link>
             <div className="d-flex mx-5 full-width justify-content-end ">
               <ThemeToggle />
@@ -25,37 +26,37 @@ function Nav() {
                 <div className="col-lg-8 rest">
                   <ul className="navbar-nav main-bg d-flex justify-content-end">
                     <li className="nav-item">
-                      <a href="/portfolio">
+                      <a href="/">
                         <span>Home</span>
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a href="/portfolio">
+                      <a href="/">
                         <span>Services</span>
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a href="/portfolio">
+                      <a href="/">
                         <span>About</span>
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a href="/portfolio">
-                        <span>Portfolio</span>
+                      <a href="/">
+                        <span></span>
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a href="/portfolio">
+                      <a href="/">
                         <span>Price</span>
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a href="/portfolio">
+                      <a href="/">
                         <span>Contact</span>
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a href="/portfolio">
+                      <a href="/">
                         <span>Blog</span>
                       </a>
                     </li>

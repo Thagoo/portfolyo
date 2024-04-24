@@ -1,12 +1,12 @@
 import React from "react";
-import data from "@/data/services.json";
+
 function Services({ services }) {
   const sortedServices = services
     .filter((service) => service.enabled)
     .sort((a, b) => a.sequence - b.sequence);
   return (
     <div
-      className="sec-box services section-padding bord-thin-bottom"
+      className="sec-box bg-main services section-padding bord-thin-bottom"
       id="services"
     >
       <div className="sec-head mb-80 wow fadeInUp">
