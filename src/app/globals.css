@@ -2578,9 +2578,12 @@ body.loaded {
 .swiper-controls.arrow-out .right {
   width: 50px;
   height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   line-height: 50px;
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: var(--border);
   border-radius: 50%;
   color: #fff;
 }
