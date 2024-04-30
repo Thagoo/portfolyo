@@ -8,9 +8,9 @@ const ProgressScroll = () => {
 
   const updateProgress = () => {
     if (window.pageYOffset > offset) {
-      containerRef.current.classList.add("active-progress");
+      containerRef?.current.classList.add("active-progress");
     } else {
-      containerRef.current.classList.remove("active-progress");
+      containerRef?.current.classList.remove("active-progress");
     }
     let progressPath = containerRef.current.querySelector("path");
     let pathLength = progressPath.getTotalLength();

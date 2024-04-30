@@ -1,5 +1,4 @@
-"use client";
-import React, { useEffect } from "react";
+import React from "react";
 import ProgressScroll from "@/components/Common/ProgressScroll";
 import Cursor from "@/components/Common/cusor";
 import LoadingScreen from "@/components/Common/loader";

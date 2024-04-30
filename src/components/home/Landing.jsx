@@ -26,7 +26,7 @@ function Landing() {
             <div className="item mt-40">
               <div className="img">
                 <div className="screen">
-                  <Link href="/portfolio" onClick={() => setTheme("dark")}>
+                  <Link href="/" onClick={() => setTheme("dark")}>
                     <img src="demos/1.png" alt="" />
                   </Link>
                 </div>
@@ -41,7 +41,7 @@ function Landing() {
             <div className="item mt-40">
               <div className="img">
                 <div className="screen">
-                  <Link href="/portfolio" onClick={() => setTheme("light")}>
+                  <Link href="/" onClick={() => setTheme("light")}>
                     <img src="demos/2.png" alt="" />
                   </Link>
                 </div>

@@ -11,10 +11,11 @@ import Lines from "@/components/Common/Lines";
 
 import Projects from "@/components/portfolio/works/projects";
 import { fetchPortfolioData } from "@/lib/data";
+
 const data = await fetchPortfolioData();
 
 export const metadata = {
-  title: data?.about.name,
+  title: `${data?.about.name} | Projects`,
   description: `${data?.about.name} ${data?.about.title}`,
 };
 

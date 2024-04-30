@@ -26,7 +26,7 @@ function Posts() {
                     Aug 2022
                   </span>
                   <h5>
-                    <Link href={`/portfolio/${item.link}`}>{item.title}</Link>
+                    <Link href={`/${item.link}`}>{item.title}</Link>
                   </h5>
                 </div>
                 <div className="info d-flex align-items-center">
@@ -36,7 +36,7 @@ function Posts() {
                     </span>
                   </div>
                   <div className="ml-auto">
-                    <Link href={`/portfolio/${item.link}`}>
+                    <Link href={`/${item.link}`}>
                       Read More{" "}
                       <svg
                         className="ml-5"

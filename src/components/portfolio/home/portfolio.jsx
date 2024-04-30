@@ -17,7 +17,7 @@ function Portfolio({ projects }) {
           </div>
           <div className="col-lg-6 valign">
             <div className="go-more full-width d-flex justify-content-end">
-              <a href="/portfolio/works" className="d-flex">
+              <a href="/works" className="d-flex">
                 <span>
                   View All Works{" "}
                   <svg
@@ -42,7 +42,7 @@ function Portfolio({ projects }) {
             <div key={index} className="col-lg-6 items">
               <div className="item mt-50 wow fadeInUp" data-wow-delay=".2s">
                 <div className="img">
-                  <a href={`/portfolio/works/${item.link}`}>
+                  <a href={`/works/${item.link}`}>
                     <img src={item.image.url} alt="" />
                   </a>
                 </div>
@@ -74,7 +74,7 @@ function Portfolio({ projects }) {
               </div>
               <div className="px-3 d-flex full-width">
                 <h6 className="line-height-1 flex-grow-1 ">
-                  <a href="/portfolio/single-project">{item.title}</a>
+                  <a href="/single-project">{item.title}</a>
                 </h6>{" "}
                 <a href="#0">
                   <i className="fab fa-github">{item.githuburl}</i>

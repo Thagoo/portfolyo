@@ -18,7 +18,7 @@ function Blog() {
           </div>
           <div className="col-lg-6 valign">
             <div className="go-more full-width d-flex justify-content-end">
-              <a href="/portfolio/blogs" className="d-flex">
+              <a href="/blogs" className="d-flex">
                 <span>
                   View All Posts{" "}
                   <svg
