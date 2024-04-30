@@ -27,16 +27,16 @@ function Timelines({ timelines }) {
       className="sec-box bg-main services section-padding bord-thin-bottom"
       id="timeline"
     >
-      <div className="sec-head mb-80 wow fadeInUp">
+      <div className="sec-head wow fadeInUp">
         <div className="row justify-content-center">
           <div className="col-lg-6 text-center">
-            <h6 className="sub-title opacity-7 mb-15">Timeline</h6>
+            <h6 className="sub-title opacity-7 mb-20">Timeline</h6>
           </div>
         </div>
       </div>
       <div className="row">
         <div className="col-lg-12 ">
-          <div className="sec-head md-mb20 wow fadeIn text-center mb-20">
+          <div className="sec-head md-mb-20 wow fadeIn text-center mb-20">
             <h3>
               <span className="main-color">Education</span>
             </h3>
@@ -82,20 +82,20 @@ function TimelineCard({ item }) {
           {item.company_name}
         </span>
 
-        <p className="mb-15">{item.summary}</p>
+        <p className="mb-15 text-accent-foreground">{item.summary}</p>
         <div className="feat">
           <ul className="rest">
             {item.bulletPoints.map((point, index) => (
               <li key={index} className="mb-10">
-                <p>
-                  <i class="fa fa-circle-notch mr-10" aria-hidden="true"></i>
+                <p className="text-accent-foreground">
+                  <i class="fa fa-circle-notch mr-10 " aria-hidden="true"></i>
                   {point}
                 </p>
               </li>
             ))}
           </ul>
         </div>
-        <p className="bord-color">
+        <p className="bord-color text-accent-foreground">
           {formatDate(item.startDate)} to {formatDate(item.endDate)}
         </p>
       </div>

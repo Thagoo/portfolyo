@@ -25,7 +25,6 @@ module.exports = {
         lg: "1rem 2rem 7rem var(--tw-shadow-color)",
       },
       colors: {
-        border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",

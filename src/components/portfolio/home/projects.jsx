@@ -84,7 +84,7 @@ function Projects({ projects }) {
                 <div className="mt-20 butn-presv">
                   {item.techStack.map((item, index) => (
                     <span
-                      className={`butn butn-xs butn-bord radius-5 ml-10 cursor-pointer p-1  ${
+                      className={` butn butn-xs butn-bord radius-5 ml-10 cursor-pointer p-1 ${
                         activeFilter == item ? "active" : ""
                       }`}
                       key={index}

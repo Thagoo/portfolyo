@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function Footer() {
   return (
@@ -7,14 +7,7 @@ function Footer() {
         <div className="row">
           <div className="col-12">
             <div className="text-center">
-              <p className="fz-13">
-                © 2024 Gavi is Proudly Powered by{' '}
-                <span className="underline main-color">
-                  <a href="https://themeforest.net/user/UICamp" target="_blank">
-                    UICamp
-                  </a>
-                </span>
-              </p>
+              <p className="fz-13 text-accent-foreground">© 2024 thagoo</p>
             </div>
           </div>
         </div>

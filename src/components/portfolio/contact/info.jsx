@@ -51,8 +51,9 @@ function Info() {
 
               <div className="controls row">
                 <div className="col-lg-6">
-                  <div className="form-group mb-30">
+                  <div className="form-group mb-30 ">
                     <input
+                      className="text-accent-foreground border-slate-500"
                       id="form_name"
                       type="text"
                       name="name"
@@ -96,8 +97,10 @@ function Info() {
                     ></textarea>
                   </div>
                   <div className="mt-30">
-                    <button type="submit">
-                      <span className="text">Send A Message</span>
+                    <button type="submit ">
+                      <span className="text text-accent-foreground">
+                        Send A Message
+                      </span>
                     </button>
                   </div>
                 </div>

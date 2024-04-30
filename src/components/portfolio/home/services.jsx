@@ -22,13 +22,15 @@ function Services({ services }) {
       </div>
       <div className="row">
         {sortedServices.map((item, index) => (
-          <div key={index} className="col-md-6">
-            <div className="item mb-40 wow fadeIn" data-wow-delay=".2s">
+          <div key={index} className="col-md-6 ">
+            <div className="item mb-40 wow fadeIn " data-wow-delay=".2s">
               <span className="icon-img-70 mb-30 opacity-7">
                 <img src={item.image.url} alt="" />
               </span>
-              <h6 className="text-u ls1 mb-15">{item.name}</h6>
-              <p>{item.desc}</p>
+              <h6 className="text-u ls1 mb-15 text-accent-foreground">
+                {item.name}
+              </h6>
+              <p className="text-accent-foreground">{item.desc}</p>
               <div className="bord-color">{item.charge}</div>
             </div>
           </div>

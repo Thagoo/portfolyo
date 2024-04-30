@@ -1,22 +1,35 @@
 import React from "react";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function Profile({ about, socials }) {
   return (
     <section id="home" className="intro-profile md-mb50">
       <div className="row rest">
         <div className="col-lg-4 box-img bg-main">
-          <div className="cont valign">
+          <div className="cont valign ">
             <div className="full-width">
               <div className="img">
                 <img src={about?.avatar.url} alt="" />
-                <span className="icon">
-                  <img src="/assets/imgs/header/icon1.png" alt="" />
+                <span className="icon invert dark:invert-0">
+                  <img
+                    src="/assets/avatar/icon1.png"
+                    alt=""
+                    className="opacity-50"
+                  />
                 </span>
-                <span className="icon">
-                  <img src="/assets/imgs/header/icon2.png" alt="" />
+                <span className="icon invert dark:invert-0">
+                  <img
+                    src="/assets/avatar/icon2.png"
+                    alt=""
+                    className="opacity-50"
+                  />
                 </span>
-                <span className="icon">
-                  <img src="/assets/imgs/header/icon4.png" alt="" />
+                <span className="icon ">
+                  <img
+                    src="/assets/avatar/icon4.png"
+                    alt=""
+                    className="opacity-50"
+                  />
                 </span>
               </div>
 
@@ -24,11 +37,12 @@ function Profile({ about, socials }) {
                 <h5>{about?.name}</h5>
                 <p className="fz-13 text-u">{about?.title}</p>
               </div>
-              <div className="social text-center mt-20">
+              <div className="social text-center mt-20 invert dark:invert-0">
                 {socials.map((item, index) => (
                   <a href={item.url} key={index}>
-                    {/* fa icons looked better than images  */}
-                    <i className={`fab fa-${item.platform.toLowerCase()}`}></i>
+                    <i
+                      className={`fa-brands fa-${item.platform.toLowerCase()} invert dark:invert-0`}
+                    ></i>
                   </a>
                 ))}
               </div>
@@ -46,9 +60,9 @@ function Profile({ about, socials }) {
           <div className="stauts mt-80">
             <div className="d-flex align-items-center">
               <div className="mr-40">
-                <div className="d-flex align-items-center">
+                <div className="d-flex align-items-center ">
                   <h2>{about?.exp_year}</h2>
-                  <p>
+                  <p className="text-accent-foreground">
                     Years <br /> of Experance
                   </p>
                 </div>
@@ -56,15 +70,20 @@ function Profile({ about, socials }) {
               <div className="mr-40">
                 <div className="d-flex align-items-center">
                   <h2>6k</h2>
-                  <p>
+                  <p className="text-accent-foreground">
                     Clients <br /> Worldwide
                   </p>
                 </div>
               </div>
               <div>
-                <div className="butn-presv">
-                  <a href="#0" className="butn butn-md butn-bord radius-5 skew">
-                    <span>Dwonload C.V</span>
+                <div className="butn-presv  ">
+                  <a
+                    href="#0"
+                    className="butn butn-md butn-bord radius-5 skew "
+                  >
+                    <span className="text-accent-foreground ">
+                      Download C.V
+                    </span>
                   </a>
                 </div>
               </div>

@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { Link } from "react-scroll";
-import { default as NextLink } from "next/link";
 
 function Navbar() {
   return (

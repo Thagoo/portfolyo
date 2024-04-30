@@ -2,6 +2,10 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const swiperOptions = {
   modules: [Navigation],
@@ -68,7 +72,9 @@ function Testimonials({ testimonials }) {
                               </span>
                             </div>
                           </div>
-                          <p className="fz-20 mt-15">{item.review}</p>
+                          <p className="fz-20 mt-15 text-accent-foreground">
+                            {item.review}
+                          </p>
                         </div>
                         <div className="d-flex align-items-center">
                           <div>

@@ -9,7 +9,7 @@ import Footer from "@/components/portfolio/home/footer";
 import NavTop from "@/components/portfolio/home/nav-top";
 import Portfolio from "@/components/portfolio/home/portfolio";
 import Price from "@/components/portfolio/home/price";
-import Profile from "@/components/portfolio/home/profile";
+import Profile from "../components/portfolio/home/profile";
 import Services from "@/components/portfolio/home/services";
 import Skills from "@/components/portfolio/home/skills";
 import Lines from "@/components/Common/Lines";
@@ -52,8 +52,9 @@ async function HomeDark() {
             )}
 
             {data?.price && <Price />}
-            <Info />
+
             <Projects projects={data?.projects} />
+            <Info />
           </section>
         </main>
         <Footer />

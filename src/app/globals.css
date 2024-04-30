@@ -17,15 +17,22 @@ body[style] {
 
 @layer base {
   :root {
-    --background: 0 0% 80%;
-
-    --main-bg: 210, 19%, 92%;
+    --background: 210, 19.05%, 91.76%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --main-bg: 210, 19.05%, 91.76%;
+    --maincolor: rgb(63, 203, 121);
+    --border: 1px solid #bebdbd;
   }
 
   .dark {
     --background: 0, 0%, 14%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
 
     --main-bg: 0, 0%, 11%;
+    --maincolor: #c8f31d;
+    --border: 1px solid #444;
   }
 }
 
@@ -78,9 +85,6 @@ canvas {
 **********************************************/
 /* Variables f0c94a 
 -----------------------------------------------------------------*/
-:root {
-  --maincolor: #c8f31d;
-}
 
 /* Typography
 -----------------------------------------------------------------*/
@@ -357,21 +361,18 @@ img {
 }
 
 .butn.butn-bord {
-  border-color: #fff;
+  border: var(--border);
   background: transparent;
-  color: #fff;
+  color: hsl(var(--accent-foreground));
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
 }
 
 .butn.butn-bord:hover {
-  background: #fff;
-  color: #000;
-}
-
-.butn.butn-bord:hover span {
-  color: #000;
+  background-color: hsl(var(--main-bg));
+  color: hsl(var(--accent-foreground));
+  filter: invert(1);
 }
 
 .butn.butn-bg {
@@ -647,10 +648,8 @@ img {
   font-family: "Font Awesome 5 Free";
   content: "\2303";
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 900;
-  top: 25%;
-  left: 35%;
   color: #fff;
   cursor: pointer;
   display: block;
@@ -1924,7 +1923,9 @@ body.loaded {
   width: 0;
   top: 0;
   left: 0;
-  background-color: #fff;
+  background-color: hsl(var(--main-bg));
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
   -webkit-transition: all 1.5s;
   -o-transition: all 1.5s;
   transition: all 1.5s;
@@ -2074,6 +2075,7 @@ body.loaded {
 .intro-profile .box-img {
   margin-bottom: -80px;
   border-radius: 15px 0 15px 15px;
+
   padding: 80px 40px;
   overflow: hidden;
 }
@@ -2121,7 +2123,7 @@ body.loaded {
 
 .intro-profile .box-img .cont {
   padding: 40px 15px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: var(--border);
   border-radius: 5px;
   min-height: calc(100% - 80px);
 }
@@ -2454,7 +2456,7 @@ body.loaded {
   height: 100%;
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 10px;
-  background: rgba(29, 29, 29, 0.8);
+  background: hsl(var(--accent));
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   z-index: -1;
@@ -2477,7 +2479,7 @@ body.loaded {
 .services .item .bord-color {
   width: 92%;
   height: 5px;
-  background: #c8f31d;
+  background-color: var(--maincolor);
   border-radius: 4px;
   position: absolute;
   left: 4%;
@@ -2511,7 +2513,7 @@ body.loaded {
   left: 50px;
   right: 0;
   bottom: 0;
-  background: #232323;
+  background: hsl(var(--accent));
   border-radius: 30px 0 0 30px;
   z-index: -1;
 }
@@ -2523,7 +2525,6 @@ body.loaded {
   left: 50px;
   right: 0;
   bottom: 0;
-
   background-size: auto;
   background-repeat: repeat;
   border-radius: 30px 0 0 30px;
@@ -2535,7 +2536,7 @@ body.loaded {
 .testimonials .icon-qoute {
   font-size: 200px;
   line-height: 1;
-  color: #1d1d1d;
+  color: hsl(var(--background));
   position: absolute;
   top: -50px;
   right: 10%;
@@ -2624,10 +2625,11 @@ body.loaded {
 .contact input,
 .contact textarea {
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: var(--border);
   border-radius: 5px;
+  outline: none;
   background: transparent;
-  color: #fff;
+  color: hsl(var(--accent-foreground));
   padding: 15px;
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -2665,10 +2667,6 @@ body.loaded {
 .contact button .text {
   position: relative;
   z-index: 4;
-}
-
-.contact button:hover {
-  color: #1d1d1d;
 }
 
 .contact button:hover:after {
@@ -2837,7 +2835,7 @@ img.left {
 }
 
 .section-padding {
-  padding: 100px 0;
+  padding: 40px 0;
 }
 
 .section-ptb {
