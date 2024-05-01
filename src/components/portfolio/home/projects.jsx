@@ -6,32 +6,14 @@ function Projects({ projects }) {
   const [sortedProjects, setSortedProjects] = useState(projects);
   const [activeFilter, setActiveFilter] = useState(null);
 
-  const sortProjects = async () => {
-    setSortedProjects(
-      projects
-        .filter((project) => project.enabled)
-        .sort((a, b) => a.sequence - b.sequence)
-    );
-  };
-
   const filterProjects = () => {
-    const updatedProjects = projects
-      .filter((project) => project.enabled)
-      .sort((a, b) => a.sequence - b.sequence);
-
     setSortedProjects(
-      updatedProjects.filter((project) =>
-        project.techStack.includes(activeFilter)
-      )
+      projects.filter((project) => project.techStack.includes(activeFilter))
     );
   };
 
   useEffect(() => {
-    sortProjects();
-  }, [projects]);
-
-  useEffect(() => {
-    sortProjects();
+    setSortedProjects(projects);
     if (activeFilter) {
       filterProjects();
     }
@@ -42,7 +24,7 @@ function Projects({ projects }) {
       <div className="sec-head mb-30">
         <div className="row">
           <div className="col-lg-6">
-            <h6 className="sub-title opacity-7 mb-15">Our Projects</h6>
+            <h6 className="sub-title opacity-7 mb-15">Projects</h6>
             <h3>
               Look at my work & <br /> give us{" "}
               <span className="main-color">your feedback</span>
@@ -84,7 +66,7 @@ function Projects({ projects }) {
                 <div className="mt-20 butn-presv">
                   {item.techStack.map((item, index) => (
                     <span
-                      className={` butn butn-xs butn-bord radius-5 ml-10 cursor-pointer p-1 ${
+                      className={` butn butn-bord radius-5 ml-10 cursor-pointer p-1  ${
                         activeFilter == item ? "active" : ""
                       }`}
                       key={index}

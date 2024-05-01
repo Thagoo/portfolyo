@@ -374,7 +374,11 @@ img {
   color: hsl(var(--accent-foreground));
   filter: invert(1);
 }
-
+.butn.active {
+  background-color: hsl(var(--main-bg));
+  color: hsl(var(--accent-foreground));
+  filter: invert(1);
+}
 .butn.butn-bg {
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;

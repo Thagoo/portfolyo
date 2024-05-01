@@ -44,7 +44,12 @@ async function HomeDark() {
             {data?.services && <Services services={data?.services} />}
             <Skills skills={data?.skills} />
             {/* <Portfolio projects={data?.projects} /> */}
-            {data?.timeline && <Timelines timelines={data?.timeline} />}
+            {data?.education && (
+              <Timelines
+                education={data?.education}
+                experience={data?.experience}
+              />
+            )}
             {data?.testimonials && (
               <Testimonials testimonials={data?.testimonials} />
             )}
@@ -52,7 +57,12 @@ async function HomeDark() {
             {data?.price && <Price />}
 
             <Projects projects={data?.projects} />
-            <Info />
+            <Info
+              info={{
+                email: data.about.contactEmail,
+                socials: data.social_handles,
+              }}
+            />
           </section>
         </main>
         <Footer />

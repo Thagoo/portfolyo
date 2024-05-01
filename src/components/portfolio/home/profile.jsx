@@ -38,7 +38,7 @@ function Profile({ about, socials }) {
                 <p className="fz-13 text-u">{about?.title}</p>
               </div>
               <div className="social text-center mt-20 invert dark:invert-0">
-                {socials.map((item, index) => (
+                {socials.slice(0, 4).map((item, index) => (
                   <a href={item.url} key={index}>
                     <i
                       className={`fa-brands fa-${item.platform.toLowerCase()} invert dark:invert-0`}

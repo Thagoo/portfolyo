@@ -1,27 +1,9 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import Education from "@/components/ui/education";
+import Experience from "@/components/ui/experience";
+import { formatDate } from "@/lib/utils";
+import React from "react";
 
-function formatDate(dateString) {
-  const options = { year: "numeric", month: "short" };
-  const date = new Date(dateString);
-  return date.toLocaleDateString("en-US", options);
-}
-function Timelines({ timelines }) {
-  const [education, setEducation] = useState(null);
-  const [experience, setExperience] = useState(null);
-
-  useEffect(() => {
-    const sortedTimelines = timelines
-      .filter((timeline) => timeline.enabled)
-      .sort((a, b) => a.sequence - b.sequence);
-
-    const forEducation = sortedTimelines.filter((item) => item.forEducation);
-    setEducation(forEducation);
-
-    const forExperience = sortedTimelines.filter((item) => !item.forEducation);
-    setExperience(forExperience);
-  }, [timelines]);
-
+function Timelines({ experience, education }) {
   return (
     <div
       className="sec-box bg-main services section-padding bord-thin-bottom"
@@ -34,42 +16,15 @@ function Timelines({ timelines }) {
           </div>
         </div>
       </div>
-      <div className="row">
-        <div className="col-lg-12 ">
-          <div className="sec-head md-mb-20 wow fadeIn text-center mb-20">
-            <h3>
-              <span className="main-color">Education</span>
-            </h3>
-          </div>
-          <div className="row">
-            {education &&
-              education.map((item, index) => (
-                <TimelineCard item={item} key={index} />
-              ))}
-          </div>
-        </div>
-      </div>
 
-      <div className="row">
-        <div className="col-lg-12 ">
-          <div className="sec-head md-mb20 wow fadeIn text-center mb-20">
-            <h3>
-              <span className="main-color">Experience</span>
-            </h3>
-          </div>
-          <div className="row">
-            {experience &&
-              experience.map((item, index) => (
-                <TimelineCard item={item} key={index} />
-              ))}
-          </div>
-        </div>
-      </div>
+      {education.length > 0 && <Education education={education} />}
+
+      {experience.length > 0 && <Experience experience={experience} />}
     </div>
   );
 }
 
-function TimelineCard({ item }) {
+function Card({ item }) {
   return (
     <div className="col-lg-12">
       <div className="item mb-40 wow fadeIn" data-wow-delay=".2s">

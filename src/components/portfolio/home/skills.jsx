@@ -1,9 +1,6 @@
 import React from "react";
 
 function Skills({ skills }) {
-  const sortedSkills = skills
-    .filter((skill) => skill.enabled)
-    .sort((a, b) => a.sequence - b.sequence);
   return (
     <div
       className="sec-box bg-main skills section-padding bord-thin-bottom"
@@ -11,24 +8,19 @@ function Skills({ skills }) {
     >
       <div className="row justify-content-center">
         <div className="col-lg-6 text-center">
-          <h6 className="sub-title opacity-7 mb-15">Our Skills</h6>
-          <h3>
-            <span className="main-color mb-15">Awards</span> & Recognitions
-          </h3>
+          <h6 className="sub-title opacity-7 mb-15">Skills</h6>
         </div>
       </div>
 
       <div className="row">
         <div className="col-lg-12">
           <div className="row">
-            {sortedSkills.map((item, index) => (
+            {skills.map((item, index) => (
               <div key={index} className="col-md-6">
                 <div className="item mb-30">
                   <div className="d-flex align-items-center mb-30">
                     <div className="mr-30">
-                      <div className="img icon-img-40">
-                        <img src={item.image.url} alt="" />
-                      </div>
+                      <i className={`fa-brands fa-${item.fa_icon}`} />
                     </div>
                     <div>
                       <h6 className="fz-18">{item.name}</h6>
