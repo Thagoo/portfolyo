@@ -15,7 +15,7 @@ function SingleBlog() {
       <Cursor />
       <ContactUs />
       <Lines />
-      <LoadingScreen />
+
       <ProgressScroll />
       <Nav />
       <main className="container">

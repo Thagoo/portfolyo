@@ -2,7 +2,7 @@ import React from "react";
 
 import Link from "next/link";
 
-function Blog() {
+function Blog({ blogs }) {
   return (
     <div
       className="sec-box bg-main blog section-padding bord-thin-top"
@@ -37,7 +37,7 @@ function Blog() {
         </div>
       </div>
       <div className="row">
-        {data?.slice(0, 3).map((item, index) => (
+        {blogs?.slice(0, 3).map((item, index) => (
           <div key={index} className="col-lg-4">
             <div className="item md-mb30 wow fadeIn" data-wow-delay=".2s">
               <div className="img">

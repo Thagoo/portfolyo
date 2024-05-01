@@ -14,9 +14,13 @@ import Testimonials from "@/components/portfolio/home/testimonials";
 import Timelines from "@/components/portfolio/home/timelines";
 import Projects from "@/components/portfolio/home/projects";
 import { fetchPortfolioData } from "@/lib/data";
+import Blog from "@/components/portfolio/home/blog";
 
 const data = await fetchPortfolioData();
 
+if (!data) {
+  throw new Error("Something went wrong");
+}
 export const metadata = {
   title: data?.about.name,
   description: `${data?.about.name} ${data?.about.title}`,
@@ -44,7 +48,7 @@ async function HomeDark() {
             {data?.testimonials && (
               <Testimonials testimonials={data?.testimonials} />
             )}
-
+            {data?.blogs && <Blog blogs={data?.blogs} />}
             {data?.price && <Price />}
 
             <Projects projects={data?.projects} />

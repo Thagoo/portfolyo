@@ -2,7 +2,7 @@ import React from "react";
 
 import Link from "next/link";
 
-function Blogs() {
+function Blogs({ blog }) {
   return (
     <section className="sec-box bg-main blog section-padding pt-0">
       <div className="row">
@@ -13,7 +13,7 @@ function Blogs() {
         </div>
       </div>
       <div className="row md-marg">
-        {data?.slice(0, 3).map((item, index) => (
+        {blog?.slice(0, 3).map((item, index) => (
           <div key={index} className="col-lg-4">
             <div className="item md-mb30">
               <div className="img">
