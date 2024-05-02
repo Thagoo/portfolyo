@@ -4,7 +4,11 @@ export const fetchPortfolioData = async () => {
   const URL = process.env.JSON_URL;
 
   try {
-    const response = await fetch(URL);
+    const response = await fetch(
+      URL,
+      { cache: "no-store" },
+      { next: { revalidate: 10 } }
+    );
     if (!response.ok) {
       console.log(response);
       throw new Error(response);
