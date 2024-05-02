@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
@@ -60,8 +61,19 @@ function Projects({ projects }) {
             <div key={index} className="col-lg-6 items">
               <div className="item mt-50 wow fadeInUp" data-wow-delay=".2s">
                 <div className="img">
-                  <Link href={`/works/${item._id}`}>
-                    <img src={item.image.url} alt="" />
+                  <Link
+                    className="!h-[200px] md:!h-[400px]"
+                    href={`/works/${item._id}`}
+                  >
+                    <Image
+                      src={item.image.url}
+                      alt=""
+                      width={500}
+                      height={200}
+                      style={{
+                        objectFit: "contain", // cover, contain, none
+                      }}
+                    />
                   </Link>
                 </div>
               </div>
@@ -82,7 +94,7 @@ function Projects({ projects }) {
                       #{item}
                     </span>
                   ))}
-                  <h6 className="mt-20">
+                  <h6 className="fz-20 mt-20">
                     <Link href={`/works/${item._id}`}>{item.title}</Link>
                   </h6>
                 </div>

@@ -16,7 +16,7 @@ function Skills({ skills }) {
         <div className="col-lg-12">
           <div className="row">
             {skills.map((item, index) => (
-              <div key={index} className="col-md-6">
+              <div key={index} className="col-md-6 ">
                 <div className="item mb-30">
                   <div className="d-flex align-items-center mb-30">
                     <div className="mr-30">

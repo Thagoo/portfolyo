@@ -20,7 +20,7 @@ body[style] {
     --background: 210, 19.05%, 91.76%;
     --accent: 0 0% 96.1%;
     --accent-foreground: 0 0% 9%;
-    --main-bg: 210, 19.05%, 91.76%;
+    --main-bg: 210, 19.05%, 85.76%;
     --maincolor: rgb(63, 203, 121);
     --border: 1px solid #bebdbd;
   }
@@ -245,7 +245,7 @@ p {
   font-size: 15px;
   font-weight: 300;
   font-family: "Poppins", sans-serif;
-  color: #ddd;
+  color: hsl(var(--accent-foreground));
   margin: 0;
 }
 
@@ -294,7 +294,7 @@ figure {
 }
 
 .sub-bg {
-  background-color: #232323;
+  background-color: hsl(var(--background));
 }
 
 img {
@@ -1900,7 +1900,7 @@ body.loaded {
 
 .skills .item {
   padding: 30px 30px 0;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: var(--border);
   border-radius: 10px;
   position: relative;
 }

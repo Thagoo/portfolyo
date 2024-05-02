@@ -28,6 +28,7 @@ function ProjectView({ project }) {
                       <li className="mt-4" key={i}>
                         <span className="icon">
                           <svg
+                            className="invert dark:invert-0"
                             width="100%"
                             height="100%"
                             viewBox="0 0 9 8"
@@ -49,7 +50,7 @@ function ProjectView({ project }) {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-4 ">
               <div className="info sub-bg" id="sticky_item">
                 <ul>
                   <li className="mb-30">

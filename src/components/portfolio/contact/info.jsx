@@ -15,16 +15,18 @@ function Info({ info }) {
               If you would like to work with me or just want to get in touch,
               I&#8220;d love to hear from you!
             </p>
-            <div className="phone fz-30 fw-600 mt-30 underline">
+            <div className="text-2xl md:text-3xl fw-600 mt-30 underline text-center">
               <a className="main-color" href={`mailto:${info.email}`}>
                 {info.email}
               </a>
             </div>
-            <ul className="rest social-text d-flex mt-60">
-              {info.socials.slice(0, 4).map((item, i) => (
-                <li className="mr-30" key={i}>
+            <ul className="flex justify-between mt-60">
+              {info.socials.map((item, i) => (
+                <li key={i}>
                   <a href={item.url} className="hover-this">
-                    <span className="hover-anim">{item.platform}</span>
+                    <i
+                      className={`fa-brands fa-${item.platform.toLowerCase()}`}
+                    />
                   </a>
                 </li>
               ))}

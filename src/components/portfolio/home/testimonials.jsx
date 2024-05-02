@@ -50,12 +50,8 @@ function Testimonials({ testimonials }) {
                 {...swiperOptions}
               >
                 {sortedTestimonials.map((item, index) => (
-                  <SwiperSlide style={{ height: "400px" }} key={index}>
+                  <SwiperSlide style={{ height: "100%" }} key={index}>
                     <div className="item ">
-                      <div className="icon-img-60 mr-60">
-                        <img src="/assets/imgs/svg-assets/quote.png" alt="" />
-                      </div>
-
                       <div>
                         <div className="cont mb-30">
                           <div className="d-flex align-items-center">
@@ -72,7 +68,7 @@ function Testimonials({ testimonials }) {
                               </span>
                             </div>
                           </div>
-                          <p className="fz-20 mt-15 text-accent-foreground">
+                          <p className="text-xl md:text-2xl mt-15 text-accent-foreground">
                             {item.review}
                           </p>
                         </div>
