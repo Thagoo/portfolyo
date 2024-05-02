@@ -82,7 +82,7 @@ function Profile({ about, socials }) {
               <div>
                 <div className="butn-presv  ">
                   <a
-                    href="#0"
+                    href={about.cvLink}
                     className="butn butn-md butn-bord radius-5 skew "
                   >
                     <span className="text-accent-foreground ">
