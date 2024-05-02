@@ -13,7 +13,7 @@ function Info({ info }) {
             <h2 className="fz-50">Let's make your brand brilliant!</h2>
             <p className="fz-15 mt-10">
               If you would like to work with me or just want to get in touch,
-              I’d love to hear from you!
+              I&apos;d love to hear from you!
             </p>
             <div className="phone fz-30 fw-600 mt-30 underline">
               <a className="main-color" href={`mailto:${info.email}`}>

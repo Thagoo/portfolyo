@@ -11,7 +11,7 @@ function Blog({ blogs }) {
       <div className="sec-head mb-80">
         <div className="row">
           <div className="col-lg-6 wow fadeInUp">
-            <h6 className="sub-title opacity-7 mb-15">Our Blog</h6>
+            <h6 className="sub-title opacity-7 mb-15">Blogs</h6>
             <h3>
               Latest News & <span className="main-color">Blog</span>
             </h3>
@@ -62,7 +62,7 @@ function Blog({ blogs }) {
                     </span>
                   </div>
                   <div className="ml-auto">
-                    <a href="portfolio/blogs/single-blog">
+                    <a href="/blogs/single-blog">
                       Read More{" "}
                       <svg
                         className="ml-5"
