@@ -1,14 +1,13 @@
 import React from "react";
 import ProgressScroll from "@/components/Common/ProgressScroll";
 import Cursor from "@/components/Common/cusor";
-
 import ContactUs from "@/components/portfolio/contact/ContactUs";
-import Nav from "@/components/portfolio/blogs/nav";
-import ProjectView from "@/components/portfolio/works/single-project/project-view";
+import ProjectView from "@/components/portfolio/works/project-view";
 import Footer from "@/components/portfolio/home/footer";
 import Lines from "@/components/Common/Lines";
 
 import { fetchPortfolioData } from "@/lib/data";
+import NavTop from "@/components/portfolio/home/nav-top";
 
 const data = await fetchPortfolioData();
 
@@ -22,7 +21,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-function SingleProject({ params }) {
+function Project({ params }) {
   const [project] = data.projects.filter(
     (project) => project._id == params.slug
   );
@@ -37,13 +36,13 @@ function SingleProject({ params }) {
       <Lines />
 
       <ProgressScroll />
-      <Nav />
+      <NavTop />
       <main className="container">
-        {project && <ProjectView singleProject={project} />}
+        {project && <ProjectView project={project} />}
       </main>
       <Footer />
     </div>
   );
 }
 
-export default SingleProject;
+export default Project;

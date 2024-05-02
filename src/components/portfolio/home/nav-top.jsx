@@ -1,13 +1,8 @@
-"use client";
-
 import React from "react";
 import { default as NextLink } from "next/link";
 import ThemeToggle from "@/components/Common/themeToggle";
-import { useTheme } from "next-themes";
 
 function NavTop() {
-  const { theme } = useTheme();
-
   return (
     <div className="nav-top pt-30 pb-30">
       <div className="container flex">

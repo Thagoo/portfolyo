@@ -1,16 +1,13 @@
-import React from "react";
-
 import ProgressScroll from "@/components/Common/ProgressScroll";
 import Cursor from "@/components/Common/cusor";
-import LoadingScreen from "@/components/Common/loader";
 import ContactUs from "@/components/portfolio/contact/ContactUs";
-import Nav from "@/components/portfolio/blogs/nav";
 import Footer from "@/components/portfolio/home/footer";
 
 import Lines from "@/components/Common/Lines";
 
-import Projects from "@/components/portfolio/works/projects";
+import Projects from "@/components/portfolio/home/projects";
 import { fetchPortfolioData } from "@/lib/data";
+import NavTop from "@/components/portfolio/home/nav-top";
 
 const data = await fetchPortfolioData();
 
@@ -27,7 +24,7 @@ async function Works() {
       <Lines />
 
       <ProgressScroll />
-      <Nav />
+      <NavTop />
       <main className="container">
         <Projects projects={data.projects} />
       </main>

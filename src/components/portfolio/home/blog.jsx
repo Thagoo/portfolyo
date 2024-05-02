@@ -37,22 +37,20 @@ function Blog({ blogs }) {
         </div>
       </div>
       <div className="row">
-        {blogs?.slice(0, 3).map((item, index) => (
+        {blogs?.map((item, index) => (
           <div key={index} className="col-lg-4">
             <div className="item md-mb30 wow fadeIn" data-wow-delay=".2s">
               <div className="img">
-                <img src={item.photo} alt="" />
+                <img src={item.image.url} alt="" />
               </div>
               <div className="box">
                 <div className="cont">
                   <span className="date">
-                    <i className="fas fa-calendar-alt mr-10 main-color"></i> 6 ,
-                    Aug 2022
+                    <i className="fas fa-calendar-alt mr-10 main-color"></i>{" "}
+                    {item.date}
                   </span>
                   <h5>
-                    <Link href={`portfolio/blogs/single-blog`}>
-                      {item.title}
-                    </Link>
+                    <Link href={`/blogs/${item.id}`}>{item.title}</Link>
                   </h5>
                 </div>
                 <div className="info d-flex align-items-center">

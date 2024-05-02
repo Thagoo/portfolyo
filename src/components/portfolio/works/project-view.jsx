@@ -1,30 +1,30 @@
+import { formatDate } from "@/lib/utils";
 import React from "react";
 
-function ProjectView({ singleProject }) {
+function ProjectView({ project }) {
   return (
     <section className="sec-box bg-main project section-padding radius-15">
       <div className="row justify-content-center">
         <div className="col-lg-11">
           <div className="img mb-80">
-            <img src={singleProject.image.url} alt="" className="radius-5" />
+            <img
+              src={project.image.url}
+              alt="project icon"
+              className="radius-5"
+            />
           </div>
           <div className="row justify-content-center">
             <div className="col-lg-7">
               <div className="cont md-mb50">
-                <h3 className="mb-15 fw-500">{singleProject.title}</h3>
+                <h3 className="mb-15 fw-500">{project.title}</h3>
 
                 <div className="mt-30">
                   <h6 className="mb-15 line-height-28">
-                    {singleProject.description}
+                    {project.description}
                   </h6>
-                  <p>
-                    We create everything digital, printable and analytical won’t
-                    seasons, appear days them stars replenish divided. All
-                    second forth. Him place was seas man and gathering creepeth
-                    called fly.
-                  </p>
+
                   <ul className="rest list-arrow mt-50">
-                    {singleProject.techStack.map((item, i) => (
+                    {project.techStack.map((item, i) => (
                       <li className="mt-4" key={i}>
                         <span className="icon">
                           <svg
@@ -56,25 +56,31 @@ function ProjectView({ singleProject }) {
                     <span className="sub-title">
                       <i className="far fa-calendar-alt mr-10"></i> Date :
                     </span>
-                    <p>6, August 2022</p>
+                    <p>{formatDate(project.date)}</p>
                   </li>
                   <li className="mb-30">
                     <span className="sub-title">
                       <i className="fas fa-list-ul mr-10"></i> Categories :
                     </span>
-                    <p>Web Design</p>
+                    <p>{project.category}</p>
                   </li>
                   <li className="mb-30">
                     <span className="sub-title">
                       <i className="far fa-user mr-10"></i> Client :
                     </span>
-                    <p>Themeforest</p>
+                    <p>{project.client}</p>
                   </li>
                   <li>
                     <span className="sub-title">
                       <i className="fas fa-globe mr-10"></i> Website :
                     </span>
-                    <p>UI_ThemeZ.com</p>
+                    <p>{project.liveurl}</p>
+                  </li>
+                  <li>
+                    <span className="sub-title">
+                      <i className="fas fa-globe mr-10"></i> Source Code :
+                    </span>
+                    <p>{project.githuburl}</p>
                   </li>
                 </ul>
               </div>

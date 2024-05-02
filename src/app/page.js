@@ -58,7 +58,7 @@ async function HomeDark() {
             {data?.testimonials && (
               <Testimonials testimonials={data?.testimonials} />
             )}
-            {data?.blogs && <Blog blogs={data?.blogs} />}
+            {/* {data?.blogs && <Blog blogs={data?.blogs} />} */}
             {data?.price && <Price />}
 
             <Info
