@@ -40,23 +40,27 @@ async function HomeDark() {
         <main className="container">
           <Profile about={data?.about} socials={data?.social_handles} />
           <Navbar />
+          <Skills skills={data?.skills} />
+          <Projects projects={data?.projects} />
+          {data?.education && (
+            <Timelines
+              education={data?.education}
+              experience={data?.experience}
+            />
+          )}
           <section className="in-box">
-            {data?.services && <Services services={data?.services} />}
-            <Skills skills={data?.skills} />
-            {/* <Portfolio projects={data?.projects} /> */}
-            {data?.education && (
-              <Timelines
-                education={data?.education}
-                experience={data?.experience}
-              />
+            {data?.services.length > 0 && (
+              <Services services={data?.services} />
             )}
+
+            {/* <Portfolio projects={data?.projects} /> */}
+
             {data?.testimonials && (
               <Testimonials testimonials={data?.testimonials} />
             )}
             {data?.blogs && <Blog blogs={data?.blogs} />}
             {data?.price && <Price />}
 
-            <Projects projects={data?.projects} />
             <Info
               info={{
                 email: data.about.contactEmail,

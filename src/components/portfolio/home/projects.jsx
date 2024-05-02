@@ -20,7 +20,10 @@ function Projects({ projects }) {
   }, [activeFilter]);
 
   return (
-    <div className="sec-box bg-main portfolio section-padding" id="projects">
+    <div
+      className="sec-box bg-main portfolio section-padding bord-thin-bottom"
+      id="projects"
+    >
       <div className="sec-head mb-30">
         <div className="row">
           <div className="col-lg-6">

@@ -8,19 +8,19 @@ function Navbar() {
       <div className="row justify-content-end rest">
         <div className="col-lg-8 rest">
           <ul className="navbar-nav bg-main d-flex justify-content-end">
-            <li className="nav-item cursor-pointer ">
-              <Link to="services" spy={true} smooth={true}>
-                <span>Services</span>
-              </Link>
-            </li>
             <li className="nav-item cursor-pointer">
               <Link to="home" spy={true} smooth={true}>
                 <span>About</span>
               </Link>
             </li>
             <li className="nav-item cursor-pointer">
-              <Link to="portfolio" spy={true} smooth={true}>
-                <span>Portfolio</span>
+              <Link to="skills" spy={true} smooth={true}>
+                <span>Skills</span>
+              </Link>
+            </li>
+            <li className="nav-item cursor-pointer">
+              <Link to="projects" spy={true} smooth={true}>
+                <span>Projects</span>
               </Link>
             </li>
             <li className="nav-item cursor-pointer">
@@ -28,14 +28,14 @@ function Navbar() {
                 <span>Timeline</span>
               </Link>
             </li>
-            <li className="nav-item cursor-pointer">
-              <Link to="contact" spy={true} smooth={true}>
-                <span>Contact</span>
+            <li className="nav-item cursor-pointer ">
+              <Link to="services" spy={true} smooth={true}>
+                <span>Services</span>
               </Link>
             </li>
             <li className="nav-item cursor-pointer">
-              <Link to="projects" spy={true} smooth={true}>
-                <span>Projects</span>
+              <Link to="contact" spy={true} smooth={true}>
+                <span>Contact</span>
               </Link>
             </li>
           </ul>

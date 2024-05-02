@@ -12,7 +12,7 @@ function Services({ services }) {
       <div className="sec-head mb-80 wow fadeInUp">
         <div className="row justify-content-center">
           <div className="col-lg-6 text-center">
-            <h6 className="sub-title opacity-7 mb-15">Our Services</h6>
+            <h6 className="sub-title opacity-7 mb-15">My Services</h6>
             <h3>
               Turn Information{" "}
               <span className="main-color">Into Actionable</span> Insights

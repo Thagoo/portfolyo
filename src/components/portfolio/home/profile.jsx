@@ -69,10 +69,14 @@ function Profile({ about, socials }) {
               </div>
               <div className="mr-40">
                 <div className="d-flex align-items-center">
-                  <h2>6k</h2>
-                  <p className="text-accent-foreground">
-                    Clients <br /> Worldwide
-                  </p>
+                  {about?.clients && (
+                    <>
+                      <h2>{about?.clients}</h2>
+                      <p className="text-accent-foreground">
+                        Clients <br /> Worldwide
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
               <div>
