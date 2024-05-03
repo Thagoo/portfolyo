@@ -2780,7 +2780,7 @@ img.left {
 }
 
 .bord-thin-bottom {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid hsl(var(--accent));
 }
 
 .bord-thin-bottom.bord-dark {
