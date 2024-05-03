@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolyo
 
-## Getting Started
+Portfolyo is a dynamic portfolio site builder where users can fill their data in JSON format and Portfolyo will render their data into a beautiful portfolio website. It's built using Next.js, Tailwind CSS, and CSS for styling. The project also implements Server-Side Rendering (SSR) and Search Engine Optimization (SEO) to ensure optimal performance and visibility.
 
-First, run the development server:
+![Portfolyo Screenshot](https://github.com/Thagoo/portfolyo/assets/47388359/4246d6dd-08da-4853-8897-37f1f56628c5)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Dynamic portfolio site generation based on user-provided JSON data.
+- Next.js for server-side rendering and optimized performance.
+- Tailwind CSS for fast and responsive styling.
+- Custom CSS for additional styling and design enhancements.
+- SEO implementation for improved search engine visibility.
+- Beautifully designed templates for showcasing user portfolios.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clone the repository:
 
-## Learn More
+   ```
+   git clone https://github.com/thagoo/portfolyo.git
 
-To learn more about Next.js, take a look at the following resources:
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Navigate into the project directory:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```
+   cd portfolyo
+   ```
 
-## Deploy on Vercel
+3. Install dependencies:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```
+   npm install
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contributing
+
+Contributions are welcome! Feel free to open issues or pull requests for bug fixes, improvements, or new features.
+
+    1. Fork the repository.
+    2. Create a new branch: git checkout -b feature/your-feature.
+    3. Make your changes and commit them: git commit -m 'Add some feature'.
+    4. Push to the branch: git push origin feature/your-feature.
+    5. Submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.
