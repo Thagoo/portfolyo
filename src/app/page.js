@@ -49,9 +49,7 @@ async function Home() {
             />
           )}
           <section className="in-box">
-            {data?.services.length > 0 && (
-              <Services services={data?.services} />
-            )}
+            {data?.services && <Services services={data?.services} />}
 
             {/* <Portfolio projects={data?.projects} /> */}
 
