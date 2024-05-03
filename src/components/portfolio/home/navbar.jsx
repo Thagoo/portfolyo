@@ -34,8 +34,8 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item cursor-pointer">
-              <Link to="contact" spy={true} smooth={true}>
-                <span>Contact</span>
+              <Link to="testimonials" spy={true} smooth={true}>
+                <span>Testimonials</span>
               </Link>
             </li>
           </ul>

@@ -26,9 +26,9 @@ export const metadata = {
   description: `${data?.about.name} ${data?.about.title}`,
 };
 
-async function HomeDark() {
+async function Home() {
   return (
-    <div className="bg-background">
+    <div>
       <Cursor />
       <ContactUs />
       <Lines />
@@ -75,4 +75,4 @@ async function HomeDark() {
   );
 }
 
-export default HomeDark;
+export default Home;

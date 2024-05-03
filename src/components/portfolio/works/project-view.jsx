@@ -72,16 +72,16 @@ function ProjectView({ project }) {
                     <p>{project.client}</p>
                   </li>
                   <li>
-                    <span className="sub-title">
-                      <i className="fas fa-globe mr-10"></i> Website :
+                    <span className="sub-title underline mb-4">
+                      <i className="fas fa-globe mr-10"></i>{" "}
+                      <a href={project.liveurl}>Website</a>
                     </span>
-                    <p>{project.liveurl}</p>
                   </li>
                   <li>
-                    <span className="sub-title">
-                      <i className="fas fa-globe mr-10"></i> Source Code :
+                    <span className="sub-title underline">
+                      <i className="fas fa-globe mr-10"></i>{" "}
+                      <a href={project.githuburl}>Source Code</a>
                     </span>
-                    <p>{project.githuburl}</p>
                   </li>
                 </ul>
               </div>

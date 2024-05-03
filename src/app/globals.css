@@ -139,12 +139,13 @@ body:before {
 }
 
 .lines span {
-  color: #b7b7b7;
+  color: hsl(var(--accent));
   height: 100%;
   width: 10%;
   margin: 0 5%;
-  border-right: 1px solid rgba(255, 255, 255, 0.05);
-  border-left: 1px dashed rgba(255, 255, 255, 0.05);
+  border-right: var(--border);
+  border-left: var(--border);
+  opacity: 30%;
 }
 
 @media (min-width: 1400px) {

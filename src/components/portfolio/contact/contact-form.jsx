@@ -16,7 +16,7 @@ export default function ContactForm() {
 
   return (
     <div>
-      <form id="contact-form" method="post" action={handleContact}>
+      <form id="contact" action={handleContact}>
         <div className="messages"></div>
 
         <div className="controls row">
