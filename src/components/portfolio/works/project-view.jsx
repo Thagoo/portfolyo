@@ -89,46 +89,6 @@ function ProjectView({ project }) {
           </div>
         </div>
       </div>
-      <div className="imgs mt-80">
-        <div className="row justify-content-center">
-          <div className="col-lg-11">
-            <div className="row md-marg">
-              <div className="col-md-6">
-                <div className="img sm-mb30">
-                  <img src="/assets/imgs/works/project/2.png" alt="" />
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="img">
-                  <img src="/assets/imgs/works/project/3.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="next-prev">
-        <div className="row justify-content-center">
-          <div className="col-lg-11">
-            <div className="d-flex align-items-center mt-80 pt-80 bord-thin-top">
-              <div className="prev">
-                <h6 className="sub-title">
-                  <a href="#">
-                    <i className="fas fa-long-arrow-alt-left"></i> Prev Project
-                  </a>
-                </h6>
-              </div>
-              <div className="next ml-auto">
-                <h6 className="sub-title">
-                  <a href="#">
-                    next Project <i className="fas fa-long-arrow-alt-right"></i>
-                  </a>
-                </h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }
