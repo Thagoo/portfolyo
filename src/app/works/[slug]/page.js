@@ -10,9 +10,9 @@ import { fetchPortfolioData } from "@/lib/data";
 import NavTop from "@/components/portfolio/home/nav-top";
 import Link from "next/link";
 
-const data = await fetchPortfolioData();
-
 export async function generateMetadata({ params }) {
+  const data = await fetchPortfolioData();
+
   const [project] = data.projects.filter(
     (project) => project._id == params.slug
   );
@@ -22,7 +22,11 @@ export async function generateMetadata({ params }) {
   };
 }
 
-function Project({ params }) {
+async function Project({ params }) {
+  const data = await fetchPortfolioData();
+  if (!data) {
+    throw new Error("Something went wrong");
+  }
   const [project] = data.projects.filter(
     (project) => project._id == params.slug
   );

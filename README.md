@@ -15,7 +15,7 @@ FORMSPREE_URL = URL
 
 JSON_URL
 
-    1. Copy and Edit [this](https://github.com/Thagoo/portfolyo/blob/master/.template/template.json) sample JSON file.
+    1. Copy and Edit https://github.com/Thagoo/portfolyo/blob/master/.template/template.json sample JSON file.
     2. Go to https://www.npoint.io/docs and Create JSON Bin then paste the edited content
     3. Save and copy the URL generated in bottom
 

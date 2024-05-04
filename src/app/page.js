@@ -16,17 +16,12 @@ import Projects from "@/components/portfolio/home/projects";
 import { fetchPortfolioData } from "@/lib/data";
 import Blog from "@/components/portfolio/home/blog";
 
-const data = await fetchPortfolioData();
-
-if (!data) {
-  throw new Error("Something went wrong");
-}
-export const metadata = {
-  title: data?.about.name,
-  description: `${data?.about.name} ${data?.about.title}`,
-};
-
 async function Home() {
+  const data = await fetchPortfolioData();
+
+  if (!data) {
+    throw new Error("Something went wrong");
+  }
   return (
     <div>
       <Cursor />

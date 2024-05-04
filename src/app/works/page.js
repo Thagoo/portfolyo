@@ -9,14 +9,26 @@ import Projects from "@/components/portfolio/home/projects";
 import { fetchPortfolioData } from "@/lib/data";
 import NavTop from "@/components/portfolio/home/nav-top";
 
-const data = await fetchPortfolioData();
-
-export const metadata = {
-  title: `${data?.about.name} | Projects`,
-  description: `${data?.about.name} ${data?.about.title}`,
-};
+export async function generateMetadata() {
+  const data = await fetchPortfolioData();
+  if (!data) {
+    return {
+      title: `Not Found`,
+      description: `Error getting user information `,
+    };
+  }
+  return {
+    title: `${data?.about.name} | Projects`,
+    description: `${data?.about.name} ${data?.about.title}`,
+  };
+}
 
 async function Works() {
+  const data = await fetchPortfolioData();
+
+  if (!data) {
+    throw new Error("Something went wrong");
+  }
   return (
     <div>
       <Cursor />
