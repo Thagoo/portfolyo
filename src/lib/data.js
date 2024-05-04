@@ -1,13 +1,11 @@
-"use server";
-
 export const fetchPortfolioData = async () => {
   const URL = process.env.JSON_URL;
 
   try {
     const response = await fetch(
       URL,
-      { cache: "no-store" },
-      { next: { revalidate: 10 } }
+
+      { next: { revalidate: 120 } }
     );
     if (!response.ok) {
       console.log(response);
