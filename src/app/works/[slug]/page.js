@@ -13,9 +13,15 @@ import Link from "next/link";
 export async function generateMetadata({ params }) {
   const data = await fetchPortfolioData();
 
-  const [project] = data.projects.filter(
-    (project) => project._id == params.slug
-  );
+  const project = data.projects[params.slug];
+
+  if (!project) {
+    return {
+      title: `Not Found`,
+      description: `Error getting user information `,
+    };
+  }
+
   return {
     title: project.title,
     description: project.description,
@@ -23,27 +29,17 @@ export async function generateMetadata({ params }) {
 }
 
 async function Project({ params }) {
+  let slug = +params.slug;
+
   const data = await fetchPortfolioData();
   if (!data) {
-    throw new Error("Something went wrong");
+    throw new Error("404 Something went wrong");
   }
-  const [project] = data.projects.filter(
-    (project) => project._id == params.slug
-  );
+  const project = data.projects[params.slug];
 
-  if (!project) {
-    throw new Error("Something went wrong");
-  }
+  const prev = slug <= 0 ? data.projects.length - 1 : slug - 1;
 
-  const prev =
-    data.projects.indexOf(project) === 0
-      ? data.projects.length - 1
-      : data.projects.indexOf(project) - 1;
-
-  const next =
-    data.projects.indexOf(project) === data.projects.length - 1
-      ? 0
-      : data.projects.indexOf(project) + 1;
+  const next = slug >= data.projects.length - 1 ? 0 : slug + 1;
 
   return (
     <div>
@@ -81,7 +77,7 @@ async function Project({ params }) {
               <div className="d-flex align-items-center mt-80 pt-80 bord-thin-top">
                 <div className="prev">
                   <h6 className="sub-title">
-                    <Link href={`/works/${data.projects[prev]._id}`}>
+                    <Link href={`/works/${prev}`}>
                       <i className="fas fa-long-arrow-alt-left"></i> Prev
                       Project
                     </Link>
@@ -89,7 +85,7 @@ async function Project({ params }) {
                 </div>
                 <div className="next ml-auto">
                   <h6 className="sub-title">
-                    <Link href={`/works/${data.projects[next]._id}`}>
+                    <Link href={`/works/${next}`}>
                       next Project{" "}
                       <i className="fas fa-long-arrow-alt-right"></i>
                     </Link>
