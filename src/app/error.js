@@ -10,7 +10,7 @@ export default function Error({ error }) {
   return (
     <main>
       <h6 className="d-flex align-items-center justify-content-center min-vh-100">
-        Something went wrong, please try after some time
+        404 Something went wrong, please try after some time
       </h6>
     </main>
   );
