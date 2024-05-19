@@ -1,3 +1,4 @@
+import RevealOnScroll from "@/components/Common/scroll-reveal";
 import React from "react";
 
 function Skills({ skills }) {
@@ -28,8 +29,10 @@ function Skills({ skills }) {
                   </div>
                   <div className="skill-progress">
                     <span
-                      className="progres"
-                      style={{ width: `${item.percentage}%` }}
+                      className="progres progress-anim"
+                      style={{
+                        width: `${item.percentage}%`,
+                      }}
                     ></span>
                   </div>
                   <span className="value">{item.percentage}%</span>

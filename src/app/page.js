@@ -15,6 +15,7 @@ import Timelines from "@/components/portfolio/home/timelines";
 import Projects from "@/components/portfolio/home/projects";
 import { fetchPortfolioData } from "@/lib/data";
 import Blog from "@/components/portfolio/home/blog";
+import RevealOnScroll from "@/components/Common/scroll-reveal";
 
 async function Home() {
   const data = await fetchPortfolioData();
@@ -33,34 +34,56 @@ async function Home() {
       <div>
         <NavTop />
         <main className="container">
-          <Profile about={data?.about} socials={data?.social_handles} />
-          <Navbar />
-          <Skills skills={data?.skills} />
-          <Projects projects={data?.projects} />
-          {data?.education && (
-            <Timelines
-              education={data?.education}
-              experience={data?.experience}
-            />
-          )}
-          <section className="in-box">
-            {data?.services && <Services services={data?.services} />}
+          <RevealOnScroll>
+            <Profile about={data?.about} socials={data?.social_handles} />
+          </RevealOnScroll>
+          <RevealOnScroll>
+            <Navbar />
 
-            {/* <Portfolio projects={data?.projects} /> */}
-
-            {data?.testimonials && (
-              <Testimonials testimonials={data?.testimonials} />
+            <Skills skills={data?.skills} />
+          </RevealOnScroll>
+          <RevealOnScroll>
+            <Projects projects={data?.projects} />
+          </RevealOnScroll>
+          <RevealOnScroll>
+            {data?.education && (
+              <Timelines
+                education={data?.education}
+                experience={data?.experience}
+              />
             )}
-            {/* {data?.blogs && <Blog blogs={data?.blogs} />} */}
-            {data?.price && <Price />}
+          </RevealOnScroll>
 
+          {data?.services && (
+            <RevealOnScroll>
+              {" "}
+              <Services services={data?.services} />
+            </RevealOnScroll>
+          )}
+
+          {/* <Portfolio projects={data?.projects} /> */}
+
+          {data?.testimonials && (
+            <RevealOnScroll>
+              <Testimonials testimonials={data?.testimonials} />{" "}
+            </RevealOnScroll>
+          )}
+
+          {/* {data?.blogs && <Blog blogs={data?.blogs} />} */}
+          {data?.price && (
+            <RevealOnScroll>
+              {" "}
+              <Price />
+            </RevealOnScroll>
+          )}
+          <RevealOnScroll>
             <Info
               info={{
                 email: data.about.contactEmail,
                 socials: data.social_handles,
               }}
             />
-          </section>
+          </RevealOnScroll>
         </main>
         <Footer />
       </div>
